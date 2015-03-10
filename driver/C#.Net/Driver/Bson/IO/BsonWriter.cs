@@ -21,7 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SequoiaDB.Bson.IO
+namespace SqlDB.Bson.IO
 {
     /// <summary>
     /// Represents a BSON writer for some external format (see subclasses).

@@ -91,7 +91,7 @@ if src_path == "":
          print( 'Error: Failed to build the source code!' )
          sys.exit( rs )
 
-   src_path = work_dir + '/tmp/sequoiadb'
+   src_path = work_dir + '/tmp/sqldb'
    print( 'prepare the source files...' )
    str_tmp = [ scrpt_path, '/cppkgfiles.sh ', src_path, ' ', build_type ]
    cp_files_cmd = ''.join( str_tmp )

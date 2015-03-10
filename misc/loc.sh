@@ -4,7 +4,7 @@ declare -i sum
 sum=0
 
 #engine
-cd ./SequoiaDB
+cd ./SqlDB
 dirs=`find . -type d -print | grep -v svn | grep -v pcre | grep -v bson | grep -v del_files | grep -v snappy | grep -v gtest`
 for dir in $dirs
 do

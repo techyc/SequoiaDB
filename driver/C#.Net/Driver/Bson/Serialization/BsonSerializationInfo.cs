@@ -19,9 +19,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents the information needed to serialize a member.

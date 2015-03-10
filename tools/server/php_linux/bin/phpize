@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Variable declaration
-prefix='/opt/sequoiadb/tools/server/php'
-datarootdir='/opt/sequoiadb/tools/server/php/php'
+prefix='/opt/sqldb/tools/server/php'
+datarootdir='/opt/sqldb/tools/server/php/php'
 exec_prefix="`eval echo ${prefix}`"
 phpdir="`eval echo ${exec_prefix}/lib/php`/build"
 includedir="`eval echo ${prefix}/include`/php"
@@ -152,7 +152,7 @@ phpize_copy_files()
 phpize_replace_prefix()
 {
   $SED \
-  -e "s#/opt/sequoiadb/tools/server/php#$prefix#" \
+  -e "s#/opt/sqldb/tools/server/php#$prefix#" \
   < "$phpdir/phpize.m4" > configure.in
 }
 

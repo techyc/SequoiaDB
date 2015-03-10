@@ -18,10 +18,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SequoiaDB.Bson.Serialization;
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.Serialization;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization.Attributes
+namespace SqlDB.Bson.Serialization.Attributes
 {
     /// <summary>
     /// Specifies serialization options for a DateTime field or property.

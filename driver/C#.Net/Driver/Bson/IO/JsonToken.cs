@@ -20,9 +20,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-namespace SequoiaDB.Bson.IO
+namespace SqlDB.Bson.IO
 {
     /// <summary>
     /// Represents a JSON token type.

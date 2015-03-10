@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Name: connect.c
- * Description: This program demostrates how to connect to SequoiaDB database.
+ * Description: This program demostrates how to connect to SqlDB database.
  * Parameters:
  *              HostName: The hostname for database server
  *              ServiceName: The service name or port number for the database

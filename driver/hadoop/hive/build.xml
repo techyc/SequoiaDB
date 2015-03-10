@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--@param ${java.driver.jar} : The path where the java.driver.jar is -->
 <!--@param ${javac.base.dir} : The path where the javac.base.dir is -->
-<!--@param ${root.dir} : The path where the ${WORKSPACE}/sequoiadb/driver/hadoop/hive -->
+<!--@param ${root.dir} : The path where the ${WORKSPACE}/sqldb/driver/hadoop/hive -->
 
 <!--Don't need to set-->
 <!--@param ${open.source.hive_connector.filename} : build with apache hive 0.12 hive-exec.jar -->
@@ -17,13 +17,13 @@
 	</taskdef>
 
 	<property name="root.dir" value="." />
-	<property name="java.driver.jar" value="${basedir}/../../java/sequoiadb.jar" />
+	<property name="java.driver.jar" value="${basedir}/../../java/sqldb.jar" />
 	<property name="javac.base.dir" value="../../../" />
 
 	<property name="open.source.target.dir" value="${root.dir}/build_open_source" />
 	<property name="cdh.target.dir" value="${root.dir}/build_cdh" />
-	<property name="open.source.hive_connector.filename" value="hive-sequoiadb-apache.jar" />
-	<property name="cdh.hive_connector.filename" value="hive-sequoiadb-cdh-5.0.0-beta-2.jar" />
+	<property name="open.source.hive_connector.filename" value="hive-sqldb-apache.jar" />
+	<property name="cdh.hive_connector.filename" value="hive-sqldb-cdh-5.0.0-beta-2.jar" />
 	
 	<property name="source.dir" value="${root.dir}/src" />
 	<property name="library.dir" value="${root.dir}/lib" />

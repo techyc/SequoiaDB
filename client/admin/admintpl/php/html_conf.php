@@ -2,16 +2,16 @@
 //部署的节点配置
 $globalvar_setup_conf = array(
 //     配置参数名			网页输入类型		列表参数(select用)				中文描述																													应用域		默认值
-//array( "installpath",	"textarea",		"",								"数据库安装路径", 																										"all",	"/opt/sequoiadb", ),
+//array( "installpath",	"textarea",		"",								"数据库安装路径", 																										"all",	"/opt/sqldb", ),
 //array( "sysgroup",		"input",			"",								"系统用户组", 																											"all",	"sdbadmin_group", ),
 //array( "sysuser", 		"input",			"",								"系统用户名", 																											"all",	"sdbadmin", ),
-//array( "syspassword", 	"input",			"",								"系统密码", 																												"all",	"sequoiadb", ),
+//array( "syspassword", 	"input",			"",								"系统密码", 																												"all",	"sqldb", ),
 //array( "groupname", 		"input",			"",								"所属分区组", 																											"",		"", ),
 
 array( "confpath", 		"",				"",								"配置文件路径", 																											"",		"", ),
 array( "logpath", 		"textarea",		"",								"同步日志存储路径，默认路径为：数据文件路径/replicalog", 																										"all",	"", ),
 array( "diagpath", 		"textarea",		"",								"诊断日志存储路径，默认路径为：数据文件路径/diaglog", 																										"all",	"", ),
-array( "dbpath", 			"textarea",		"",								"数据存储路径", 																											"all",	"/opt/sequoiadb/database/", ),
+array( "dbpath", 			"textarea",		"",								"数据存储路径", 																											"all",	"/opt/sqldb/database/", ),
 array( "indexpath", 		"textarea",		"",								"索引文件存储路径，默认路径为：数据文件路径", 																										"all",	"", ),
 array( "bkuppath", 		"textarea",		"",								"备份文件存储路径，默认路径为：数据文件路径/bakfile", 																										"all",	"", ),
 array( "maxpool", 		"input",			"",								"线程池的线程数量", 																										"all",	"0", ),

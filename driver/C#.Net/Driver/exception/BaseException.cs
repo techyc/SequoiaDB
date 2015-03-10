@@ -1,10 +1,10 @@
 ﻿using System;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class BaseException
      *  \brief Database operation exception

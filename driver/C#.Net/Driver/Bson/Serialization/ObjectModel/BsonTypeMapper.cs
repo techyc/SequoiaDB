@@ -22,7 +22,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// A static class that maps between .NET objects and BsonValues.

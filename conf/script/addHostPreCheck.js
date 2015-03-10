@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
 @modify list:
    2015-1-6 Zhaobo Tan  Init
 @parameter
-   install_path[string]: the path of where we expect the sequoiadb programs in
+   install_path[string]: the path of where we expect the sqldb programs in
 @return void
 */
 
@@ -42,7 +42,7 @@ function _init()
 {
    if ( SYS_LINUX == SYS_TYPE )
    {
-      expect_programs = [ "sequoiadb", "sdb", "sdbcm", "sdbcmd", "sdbcmart", "sdbcmtop" ] ;
+      expect_programs = [ "sqldb", "sdb", "sdbcm", "sdbcmd", "sdbcmart", "sdbcmtop" ] ;
    }
    else
    {
@@ -106,7 +106,7 @@ function _getMD5()
 }
 
 /* *****************************************************************************
-@discretion: judge whether sequoiadb programs exist or not
+@discretion: judge whether sqldb programs exist or not
 @author: Tanzhaobo
 @parameter
 @return

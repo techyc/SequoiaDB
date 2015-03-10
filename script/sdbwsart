@@ -17,10 +17,10 @@ else
   startpara=$*
 fi
 
-if [ -f /etc/default/sequoiadb ] ; then
-    source /etc/default/sequoiadb
+if [ -f /etc/default/sqldb ] ; then
+    source /etc/default/sqldb
 else
-    INSTALL_DIR=/opt/sequoiadb
+    INSTALL_DIR=/opt/sqldb
 fi
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${INSTALL_DIR}/tools/server/php/libxml2/lib/

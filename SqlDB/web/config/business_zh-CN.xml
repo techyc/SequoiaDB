@@ -1,0 +1,6 @@
+<BusinessList type="array">
+        <FILLER>
+        	<BusinessType>sqldb</BusinessType>
+        	<BusinessDesc>数据库</BusinessDesc> 
+        </FILLER>
+</BusinessList>

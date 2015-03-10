@@ -18,9 +18,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SequoiaDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.Serialization.Attributes;
 
-namespace SequoiaDB.Bson.Serialization.Options
+namespace SqlDB.Bson.Serialization.Options
 {
     /// <summary>
     /// Abstract base class for serialization options.

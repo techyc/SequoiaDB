@@ -42,7 +42,7 @@ void TraceGen::genList ()
       }
 
       string comment =
-        "/*    Copyright 2012 SequoiaDB Inc.\n"
+        "/*    Copyright 2012 SqlDB Inc.\n"
         " *\n"
         " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
         " *    you may not use this file except in compliance with the License.\n"
@@ -56,7 +56,7 @@ void TraceGen::genList ()
         " *    See the License for the specific language governing permissions and\n"
         " *    limitations under the License.\n"
         " */\n"
-        "/*    Copyright (C) 2011-2014 SequoiaDB Ltd.\n"
+        "/*    Copyright (C) 2011-2014 SqlDB Ltd.\n"
         " *    This program is free software: you can redistribute it and/or modify\n"
         " *    it under the term of the GNU Affero General Public License, version 3,\n"
         " *    as published by the Free Software Foundation.\n"
@@ -218,7 +218,7 @@ void TraceGen::_genList ( const CHAR *pPath,
                                       TRACEINCLUDESUFFIX ) ;
                         ofstream foutNew ( buffer ) ;
                         string comment =
-                          "/*    Copyright 2012 SequoiaDB Inc.\n"
+                          "/*    Copyright 2012 SqlDB Inc.\n"
                           " *\n"
                           " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
                           " *    you may not use this file except in compliance with the License.\n"

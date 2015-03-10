@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -461,7 +461,7 @@ function removeTmpDir2( ssh )
 @author: Tanzhaobo
 @parameter
    path[string]: the path of current program working
-                 e.g. /opt/sequoiadb/bin
+                 e.g. /opt/sqldb/bin
 @return
    retStr[string]: the path of script files
 ***************************************************************************** */

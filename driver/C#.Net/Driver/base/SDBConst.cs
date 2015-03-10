@@ -1,4 +1,4 @@
-﻿namespace SequoiaDB
+﻿namespace SqlDB
 {
 	public class SDBConst
 	{

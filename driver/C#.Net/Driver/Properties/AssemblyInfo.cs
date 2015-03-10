@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("SequoiaDB")]
-[assembly: AssemblyDescription("The C#.Net Client Driver for SequoiaDB")]
+[assembly: AssemblyTitle("SqlDB")]
+[assembly: AssemblyDescription("The C#.Net Client Driver for SqlDB")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sequoiadb")]
-[assembly: AssemblyProduct("SequoiaDB")]
+[assembly: AssemblyProduct("SqlDB")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

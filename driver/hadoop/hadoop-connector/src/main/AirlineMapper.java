@@ -8,7 +8,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.bson.BSONObject;
 
-import com.sequoiadb.hadoop.io.BSONWritable;
+import com.sqldb.hadoop.io.BSONWritable;
 
 public class AirlineMapper extends
 		Mapper<Object, BSONObject, Text, BSONWritable> {

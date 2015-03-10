@@ -78,7 +78,7 @@ installDir = DEFAULT_INSTALL_DIR
 nixLibPrefix = "lib"
 
 env.Append( CPPPATH=[boost_dir] )
-env.Append( CPPPATH=[ "../../../SequoiaDB/engine/include" ] )
+env.Append( CPPPATH=[ "../../../SqlDB/engine/include" ] )
 
 # specify dependent libraries for javascript engine and boost
 if guess_os == "linux":
@@ -196,12 +196,12 @@ language = get_option("language")
 if language is None:
    language = "en"
 
-copyFiles = [ "../../../SequoiaDB/engine/oss/ossUtil.c",
-              "../../../SequoiaDB/engine/oss/ossMem.c",
-              "../../../SequoiaDB/engine/oss/ossMem.cpp",
-              "../../../SequoiaDB/engine/oss/oss.c",
-              "../../../SequoiaDB/engine/oss/oss.cpp",
-              "../../../SequoiaDB/engine/pd/pdComponents.cpp" ]
+copyFiles = [ "../../../SqlDB/engine/oss/ossUtil.c",
+              "../../../SqlDB/engine/oss/ossMem.c",
+              "../../../SqlDB/engine/oss/ossMem.cpp",
+              "../../../SqlDB/engine/oss/oss.c",
+              "../../../SqlDB/engine/oss/oss.cpp",
+              "../../../SqlDB/engine/pd/pdComponents.cpp" ]
 for file in copyFiles:
    env.Execute(Copy('../', file))
 

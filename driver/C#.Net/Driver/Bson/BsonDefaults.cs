@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// A static helper class containing BSON defaults.
@@ -34,7 +34,7 @@ namespace SequoiaDB.Bson
         /// <summary>
         /// Gets or sets the default representation to be used in serialization of 
         /// Guids to the database. 
-        /// <seealso cref="SequoiaDB.Bson.GuidRepresentation"/> 
+        /// <seealso cref="SqlDB.Bson.GuidRepresentation"/> 
         /// </summary>
         public static GuidRepresentation GuidRepresentation
         {

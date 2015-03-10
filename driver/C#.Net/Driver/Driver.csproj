@@ -8,8 +8,8 @@
     <ProjectGuid>{99B0CB56-7B4B-473A-BBA5-BA616F49BE68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SequoiaDB</RootNamespace>
-    <AssemblyName>SequoiaDB</AssemblyName>
+    <RootNamespace>SqlDB</RootNamespace>
+    <AssemblyName>SqlDB</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

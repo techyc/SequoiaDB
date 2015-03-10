@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DriverTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("sequoiadb")]
+[assembly: AssemblyCompany("sqldb")]
 [assembly: AssemblyProduct("DriverTest")]
-[assembly: AssemblyCopyright("Copyright © sequoiadb 2012")]
+[assembly: AssemblyCopyright("Copyright © sqldb 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

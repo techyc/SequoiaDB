@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@
 @modify list:
    2014-7-26 Zhaobo Tan  Init
 @parameter
-   BUS_JSON: the format is: { "InstallGroupName": "group1", "InstallHostName": "rhel64-test8", "InstallSvcName": "51000", "InstallPath": "/opt/sequoiadb/database/data/51000", "InstallConfig": { "diaglevel": 3, "role": "data", "logfilesz": 64, "logfilenum": 20, "transactionon": "false", "preferedinstance": "A", "numpagecleaners": 1, "pagecleaninterval": 10000, "hjbuf": 128, "logbuffsize": 1024, "maxprefpool": 200, "maxreplsync": 10, "numpreload": 0, "sortbuf": 512, "syncstrategy": "none" } } ;
-   SYS_JSON: the format is: { "VCoordSvcName": "10000", "SdbUser": "sdbadmin", "SdbPasswd": "sdbadmin", "SdbUserGroup": "sdbadmin_group", "User": "root", "Passwd": "sequoiadb", "SshPort": "22" } ;
+   BUS_JSON: the format is: { "InstallGroupName": "group1", "InstallHostName": "rhel64-test8", "InstallSvcName": "51000", "InstallPath": "/opt/sqldb/database/data/51000", "InstallConfig": { "diaglevel": 3, "role": "data", "logfilesz": 64, "logfilenum": 20, "transactionon": "false", "preferedinstance": "A", "numpagecleaners": 1, "pagecleaninterval": 10000, "hjbuf": 128, "logbuffsize": 1024, "maxprefpool": 200, "maxreplsync": 10, "numpreload": 0, "sortbuf": 512, "syncstrategy": "none" } } ;
+   SYS_JSON: the format is: { "VCoordSvcName": "10000", "SdbUser": "sdbadmin", "SdbPasswd": "sdbadmin", "SdbUserGroup": "sdbadmin_group", "User": "root", "Passwd": "sqldb", "SshPort": "22" } ;
 @return
    RET_JSON: the format is: {}
 */

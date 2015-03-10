@@ -1,8 +1,8 @@
-﻿using SequoiaDB;
+﻿using SqlDB;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 using System.Text;
 using System.Collections;
 
@@ -780,7 +780,7 @@ namespace DriverTest
             // create another node
             string host = "192.168.20.42";
             int port = 55555;
-            string dataPath = "/opt/sequoiadb/database/data/55555";
+            string dataPath = "/opt/sqldb/database/data/55555";
             string groupName = "group1";
             ReplicaGroup rg = null;
             try
@@ -788,7 +788,7 @@ namespace DriverTest
                 // get the exist group
                 rg = sdb.GetReplicaGroup(groupName);
                 // remove the node we going to use
-                SequoiaDB.Node node = rg.GetNode(host, port);
+                SqlDB.Node node = rg.GetNode(host, port);
                 if (node != null)
                 {
                     rg.RemoveNode(host, port, new BsonDocument());
@@ -841,7 +841,7 @@ namespace DriverTest
             finally
             {
                 // remove the newly build node
-                SequoiaDB.Node node = rg.GetNode(host, port);
+                SqlDB.Node node = rg.GetNode(host, port);
                 if (node != null)
                 {
                     rg.RemoveNode(host, port, new BsonDocument());

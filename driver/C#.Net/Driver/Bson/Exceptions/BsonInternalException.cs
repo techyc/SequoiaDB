@@ -19,7 +19,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// Represents a BSON internal exception (almost surely the result of a bug).

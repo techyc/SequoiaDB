@@ -1,13 +1,13 @@
 ﻿using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 using System.Net;
 using System.Collections.Generic;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class Node
      *  \brief Database operation interfaces of node.
@@ -79,7 +79,7 @@ namespace SequoiaDB
         /** \fn bool Stop()
          *  \brief Stop the current node
          *  \return True if succeed or False if fail
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool Stop()
@@ -91,7 +91,7 @@ namespace SequoiaDB
         /** \fn bool Start()
          *  \brief Start the current node
          *  \return True if succeed or False if fail
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool Start()
@@ -103,7 +103,7 @@ namespace SequoiaDB
         /** \fn SDBConst.NodeStatus GetStatus()
          *  \brief Get the status of current node
          *  \return The status of current node
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public SDBConst.NodeStatus GetStatus()
@@ -128,7 +128,7 @@ namespace SequoiaDB
         /** \fn Sequoiadb Connect()
          *  \brief Connect to remote Sequoiadb database node
          *  \return The Sequoiadb handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Sequoiadb Connect()
@@ -141,7 +141,7 @@ namespace SequoiaDB
          *  \username Sequoiadb connection user name
          *  \password Sequoiadb connection password
          *  \return The Sequoiadb handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Sequoiadb Connect(string username, string password)
@@ -173,7 +173,7 @@ namespace SequoiaDB
         private SDBMessage AdminCommand(string command, BsonDocument arg1, BsonDocument arg2,
                                         BsonDocument arg3, BsonDocument arg4)
         {
-            IConnection connection = group.SequoiaDB.Connection;
+            IConnection connection = group.SqlDB.Connection;
             BsonDocument dummyObj = new BsonDocument();
             SDBMessage sdbMessage = new SDBMessage();
             sdbMessage.OperationCode = Operation.OP_QUERY;

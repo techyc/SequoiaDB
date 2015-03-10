@@ -19,7 +19,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.IO
+namespace SqlDB.Bson.IO
 {
     /// <summary>
     /// Used by BsonReaders and BsonWriters to represent the current context.

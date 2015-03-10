@@ -19,7 +19,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.IO
+namespace SqlDB.Bson.IO
 {
     /// <summary>
     /// Represents a BSON reader for a binary BSON byte array.

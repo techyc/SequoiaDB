@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.bson.BSONObject;
 
 
-import com.sequoiadb.hadoop.mapreduce.SequoiadbInputFormat;
+import com.sqldb.hadoop.mapreduce.SequoiadbInputFormat;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.TextOutputFormat;
@@ -26,7 +26,7 @@ public class MainTask {
 		@Override
 		protected void setup(org.apache.hadoop.mapreduce.Mapper.Context context)
 				throws IOException, InterruptedException {
-			selectField = context.getConfiguration().get("sequoiadb.in.field");		
+			selectField = context.getConfiguration().get("sqldb.in.field");		
 		}
 
 		public final IntWritable one = new IntWritable(1);
@@ -74,7 +74,7 @@ public class MainTask {
 	public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 		
 		Configuration conf=new Configuration();
-		conf.addResource("sequoiadb-hadoop.xml");
+		conf.addResource("sqldb-hadoop.xml");
 		Job job=new Job(conf);
 		job.setJarByClass(MainTask.class);
 		job.setJobName("test");

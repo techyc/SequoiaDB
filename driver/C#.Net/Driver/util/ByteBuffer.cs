@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     /// <summary>
     /// Create a variable length Byte Array.

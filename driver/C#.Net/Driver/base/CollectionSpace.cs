@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class CollectionSpace
      *  \brief Database operation interfaces of collection space
@@ -25,11 +25,11 @@ namespace SequoiaDB
            get { return name; }
        }
 
-        /** \property SequoiaDB
+        /** \property SqlDB
          *  \brief Return the Sequoiadb handle of current collection space
          *  \return Sequoiadb object
          */
-        public Sequoiadb SequoiaDB
+        public Sequoiadb SqlDB
         {
             get { return sdb; }
         }
@@ -45,7 +45,7 @@ namespace SequoiaDB
          *  \brief Get the named collection
          *  \param collectionName The collection name
          *  \return The DBCollection handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCollection GetCollection(string collectionName)
@@ -60,7 +60,7 @@ namespace SequoiaDB
          *  \brief Verify the existence of collection in current colleciont space
          *  \param colName The collection name
          *  \return True if collection existed or False if not existed
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool IsCollectionExist(string colName)
@@ -84,7 +84,7 @@ namespace SequoiaDB
          *  \brief Create the named collection in current collection space
          *  \param collectionName The collection name
          *  \return The DBCollection handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCollection CreateCollection(string collectionName) 
@@ -103,7 +103,7 @@ namespace SequoiaDB
          *  \param collectionName The collection name
          *  \param options The options
          *  \return The DBCollection handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCollection CreateCollection(string collectionName, BsonDocument options)
@@ -134,7 +134,7 @@ namespace SequoiaDB
         /** \fn void DropCollection(string collectionName)
          *  \brief Remove the named collection of current collection space
          *  \param collectionName The collection name
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void DropCollection(string collectionName)

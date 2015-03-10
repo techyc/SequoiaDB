@@ -81,7 +81,7 @@ void RCGen::genC ()
         "/** \\file ossErr.h\n"
         "    \\brief The meaning of the error code.\n"
         "*/\n"
-        "/*    Copyright 2012 SequoiaDB Inc.\n"
+        "/*    Copyright 2012 SqlDB Inc.\n"
         " *\n"
         " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
         " *    you may not use this file except in compliance with the License.\n"
@@ -95,7 +95,7 @@ void RCGen::genC ()
         " *    See the License for the specific language governing permissions and\n"
         " *    limitations under the License.\n"
         " */\n"
-        "/*    Copyright (C) 2011-2014 SequoiaDB Ltd.\n"
+        "/*    Copyright (C) 2011-2014 SqlDB Ltd.\n"
         " *    This program is free software: you can redistribute it and/or modify\n"
         " *    it under the term of the GNU Affero General Public License, version 3,\n"
         " *    as published by the Free Software Foundation.\n"
@@ -110,7 +110,7 @@ void RCGen::genC ()
         " */\n";
     fout<<std::left<<comment<<endl;
     comment = "\n// This Header File is automatically generated, you MUST NOT modify this file anyway!\n"
-              "// On the contrary, you can modify the xml file \"sequoiadb/misc/autogen/rclist.xml\" if necessary!\n";
+              "// On the contrary, you can modify the xml file \"sqldb/misc/autogen/rclist.xml\" if necessary!\n";
     fout<<comment<<endl;
 
     fout<<"#ifndef OSSERR_H_"<<endl
@@ -156,7 +156,7 @@ void RCGen::genCPP ()
     }
 
     string comment =
-        "/*    Copyright 2012 SequoiaDB Inc.\n"
+        "/*    Copyright 2012 SqlDB Inc.\n"
         " *\n"
         " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
         " *    you may not use this file except in compliance with the License.\n"
@@ -170,7 +170,7 @@ void RCGen::genCPP ()
         " *    See the License for the specific language governing permissions and\n"
         " *    limitations under the License.\n"
         " */\n"
-        "/*    Copyright (C) 2011-2014 SequoiaDB Ltd.\n"
+        "/*    Copyright (C) 2011-2014 SqlDB Ltd.\n"
         " *    This program is free software: you can redistribute it and/or modify\n"
         " *    it under the term of the GNU Affero General Public License, version 3,\n"
         " *    as published by the Free Software Foundation.\n"
@@ -185,7 +185,7 @@ void RCGen::genCPP ()
         " */\n";
     fout<<comment<<endl;
     comment = "\n// This Header File is automatically generated, you MUST NOT modify this file anyway!\n"
-              "// On the contrary, you can modify the xml file \"sequoiadb/misc/rcgen/rclist.xml\" if necessary!\n";
+              "// On the contrary, you can modify the xml file \"sqldb/misc/rcgen/rclist.xml\" if necessary!\n";
     fout<<comment<<endl;
 
     fout<<"#include \"ossErr.h\""<<endl<<endl;
@@ -225,7 +225,7 @@ void RCGen::genCS ()
     }
 
     fout<<std::left
-        <<"namespace SequoiaDB"<<endl
+        <<"namespace SqlDB"<<endl
         <<"{"<<endl
         <<"    class Errors"<<endl
         <<"    {"<<endl

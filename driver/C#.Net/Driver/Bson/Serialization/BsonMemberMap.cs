@@ -21,13 +21,13 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
-using SequoiaDB.Bson.Serialization.Conventions;
-using SequoiaDB.Bson.Serialization.IdGenerators;
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
+using SqlDB.Bson.Serialization.Conventions;
+using SqlDB.Bson.Serialization.IdGenerators;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents the mapping between a field or property and a BSON element.

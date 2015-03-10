@@ -19,10 +19,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 using System.Reflection;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Supports using type names as discriminators.

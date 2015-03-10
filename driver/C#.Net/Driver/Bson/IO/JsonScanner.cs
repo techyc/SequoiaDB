@@ -21,9 +21,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-namespace SequoiaDB.Bson.IO
+namespace SqlDB.Bson.IO
 {
     /// <summary>
     /// A static class that represents a JSON scanner.

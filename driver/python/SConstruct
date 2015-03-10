@@ -12,9 +12,9 @@ os.system( "scons -C ../../misc/autogen")
 
 root_dir           = dirname(File('SConstruct').rfile().abspath)
 client_include_dir = join(root_dir, path + 'client/CPP/include')
-client_include     = join(root_dir, path + 'SequoiaDB/engine/include')
-common_include_dir = join(root_dir, path + 'SequoiaDB/engine/client')
-bson_include_dir   = join(root_dir, path + 'SequoiaDB/engine/bson')
+client_include     = join(root_dir, path + 'SqlDB/engine/include')
+common_include_dir = join(root_dir, path + 'SqlDB/engine/client')
+bson_include_dir   = join(root_dir, path + 'SqlDB/engine/bson')
 boost_dir          = join(root_dir, path + 'thirdparty/boost')
 boost_lib_dir      = join(boost_dir, 'lib')
 

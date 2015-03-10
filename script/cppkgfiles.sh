@@ -2,7 +2,7 @@
 
 ###########################################
 # parameter description:
-# $1: dest path(e.g: /home/sequoiadb/sequoiadb-1.8)
+# $1: dest path(e.g: /home/sqldb/sqldb-1.8)
 # $2: build type(debug or release)
 ###########################################
 
@@ -38,7 +38,7 @@ sdb_path="$script_path/.."
 pkg_src_tmp=$1
 mkdir -p $pkg_src_tmp
 rm -rf $pkg_src_tmp/*
-copy_file $sdb_path/script/sequoiadb $pkg_src_tmp
+copy_file $sdb_path/script/sqldb $pkg_src_tmp
 
 #########################################
 # folder: bin
@@ -63,7 +63,7 @@ copy_file $src_dir_bin/sdbrestore $dest_dir_bin
 copy_file $src_dir_bin/sdbstart $dest_dir_bin
 copy_file $src_dir_bin/sdbstop $dest_dir_bin
 copy_file $src_dir_bin/sdbtop $dest_dir_bin
-copy_file $src_dir_bin/sequoiadb $dest_dir_bin
+copy_file $src_dir_bin/sqldb $dest_dir_bin
 copy_file $sdb_path/script/sdbwsart $dest_dir_bin
 copy_file $sdb_path/script/sdbwstop $dest_dir_bin
 
@@ -136,7 +136,7 @@ else
    exit 1
 fi
 copy_folder "$sdb_path/java/$jdk_name/*" "$pkg_src_tmp/java/jdk"
-copy_file $sdb_path/driver/java/sequoiadb.jar $pkg_src_tmp/java
+copy_file $sdb_path/driver/java/sqldb.jar $pkg_src_tmp/java
 
 #########################################
 # folder: lib
@@ -214,7 +214,7 @@ copy_file $src_dir_smp_cs/BulkInsert.cs $dest_dir_smp_cs
 copy_file $src_dir_smp_cs/Common.cs $dest_dir_smp_cs
 copy_file $src_dir_smp_cs/Find.cs $dest_dir_smp_cs
 copy_file $src_dir_smp_cs/Insert.cs $dest_dir_smp_cs
-copy_file $src_dir_smp_cs/sequoiadb.dll $dest_dir_smp_cs
+copy_file $src_dir_smp_cs/sqldb.dll $dest_dir_smp_cs
 src_dir_smp_cpp="$sdb_path/client/samples/CPP"
 dest_dir_smp_cpp="$pkg_src_tmp/samples/CPP"
 mkdir -p $dest_dir_smp_cpp
@@ -232,10 +232,10 @@ copy_file $src_dir_smp_cpp/replicaGroup.cpp $dest_dir_smp_cpp
 copy_file $src_dir_smp_cpp/run.sh $dest_dir_smp_cpp
 copy_file $src_dir_smp_cpp/sql.cpp $dest_dir_smp_cpp
 copy_file $src_dir_smp_cpp/update.cpp $dest_dir_smp_cpp
-dest_dir_smp_java_smp="$pkg_src_tmp/samples/Java/com/sequoiadb/samples"
+dest_dir_smp_java_smp="$pkg_src_tmp/samples/Java/com/sqldb/samples"
 mkdir -p $dest_dir_smp_java_smp
 copy_file $sdb_path/client/samples/Java/Readme $pkg_src_tmp/samples/Java
-src_dir_smp_java_smp="$sdb_path/client/samples/Java/com/sequoiadb/samples"
+src_dir_smp_java_smp="$sdb_path/client/samples/Java/com/sqldb/samples"
 copy_file $src_dir_smp_java_smp/Constants.java $dest_dir_smp_java_smp
 copy_file $src_dir_smp_java_smp/CsAndClOperation.java $dest_dir_smp_java_smp
 copy_file $src_dir_smp_java_smp/Delete.java $dest_dir_smp_java_smp
@@ -249,8 +249,8 @@ copy_file $src_dir_smp_java_smp/Update.java $dest_dir_smp_java_smp
 dest_dir_smp_js="$pkg_src_tmp/samples/JS"
 mkdir -p $dest_dir_smp_js
 copy_file $sdb_path/client/samples/JS/example.js $dest_dir_smp_js
-src_dir_smp_php="$sdb_path/client/samples/PHP/sequoiadb"
-dest_dir_smp_php="$pkg_src_tmp/samples/PHP/sequoiadb"
+src_dir_smp_php="$sdb_path/client/samples/PHP/sqldb"
+dest_dir_smp_php="$pkg_src_tmp/samples/PHP/sqldb"
 mkdir -p $dest_dir_smp_php
 copy_file $src_dir_smp_php/server.php $dest_dir_smp_php
 copy_file $src_dir_smp_php/show.htm $dest_dir_smp_php
@@ -261,8 +261,8 @@ copy_file $src_dir_smp_php/css/style.css $dest_dir_smp_php_css
 dest_dir_smp_php_js="$dest_dir_smp_php/js"
 mkdir -p $dest_dir_smp_php_js
 copy_file $src_dir_smp_php/js/common.js $dest_dir_smp_php_js
-src_dir_pyt="$sdb_path/client/samples/Python/sequoiadb"
-dest_dir_pyt="$pkg_src_tmp/samples/Python/sequoiadb"
+src_dir_pyt="$sdb_path/client/samples/Python/sqldb"
+dest_dir_pyt="$pkg_src_tmp/samples/Python/sqldb"
 mkdir -p $dest_dir_pyt
 copy_file $src_dir_pyt/collectionspace.py $dest_dir_pyt
 copy_file $src_dir_pyt/connect.py $dest_dir_pyt
@@ -461,12 +461,12 @@ src_dir_www_shell="$sdb_path/client/admin/admintpl/shell"
 dest_dir_www_shell="$pkg_src_tmp/www/shell"
 mkdir -p $dest_dir_www_shell
 copy_file $src_dir_www_shell/phpexec.php $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbconfig.sh $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbdeploy.sh $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbfun1.sh $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbfun2.sh $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbphp.sh $dest_dir_www_shell
-copy_file $src_dir_www_shell/sequoiadbsub.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbconfig.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbdeploy.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbfun1.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbfun2.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbphp.sh $dest_dir_www_shell
+copy_file $src_dir_www_shell/sqldbsub.sh $dest_dir_www_shell
 src_dir_www_smarty="$sdb_path/client/admin/admintpl/smarty"
 dest_dir_www_smarty="$pkg_src_tmp/www/smarty"
 mkdir -p $dest_dir_www_smarty

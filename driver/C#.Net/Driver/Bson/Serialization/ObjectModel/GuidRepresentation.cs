@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// Represents the representation to use when converting a Guid to a BSON binary value.

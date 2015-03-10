@@ -15,7 +15,7 @@
 
 using System;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// A class backed by a BsonDocument.

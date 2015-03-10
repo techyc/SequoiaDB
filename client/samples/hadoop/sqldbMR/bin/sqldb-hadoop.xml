@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <property>
+     <name>sqldb.input.url</name>
+     <value>r520-1:11810</value>
+  </property>
+  <property>
+     <name>sqldb.output.url</name>
+     <value>r520-1:11810</value>
+  </property>
+  <property>
+     <name>sqldb.in.collectionspace</name>
+     <value>total</value>
+  </property>
+  <property>
+     <name>sqldb.in.collect</name>
+     <value>data</value>
+  </property>
+  <property>
+     <name>sqldb.out.collectionspace</name>
+     <value>total</value>
+  </property>
+  <property>
+     <name>sqldb.out.collect</name>
+     <value>result</value>
+  </property>
+    <property>
+     <name>sqldb.out.bulknum</name>
+     <value>10</value>
+  </property>
+</configuration>

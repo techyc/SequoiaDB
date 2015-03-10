@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 @modify list:
    2014-7-26 Zhaobo Tan  Init
 @parameter
-   BUS_JSON: the format is: { "HostName": "rhel64-test8", "IP": "192.168.20.42", "User": "root", "Passwd": "sequoiadb", "HostInfo": [ { "HostName": "rhel64-test8", "IP": "192.168.20.165" }, { "HostName": "rhel64-test9", "IP": "192.168.20.166", "AgentService":"11790" } ] }
+   BUS_JSON: the format is: { "HostName": "rhel64-test8", "IP": "192.168.20.42", "User": "root", "Passwd": "sqldb", "HostInfo": [ { "HostName": "rhel64-test8", "IP": "192.168.20.165" }, { "HostName": "rhel64-test9", "IP": "192.168.20.166", "AgentService":"11790" } ] }
    SYS_JSON: the format is:
    ENV_JSON:
 @return
@@ -28,7 +28,7 @@
 */
 
 //println
-//var BUS_JSON = { "HostName": "susetzb", "IP": "192.168.20.42", "User": "root", "Passwd": "sequoiadb", "HostInfo": [ { "HostName": "rhel64-test8", "IP": "192.168.20.165" }, { "HostName": "rhel64-test9", "IP": "192.168.20.166" }, { "HostName": "susetzb", "IP": "192.168.20.42" } ] } ;
+//var BUS_JSON = { "HostName": "susetzb", "IP": "192.168.20.42", "User": "root", "Passwd": "sqldb", "HostInfo": [ { "HostName": "rhel64-test8", "IP": "192.168.20.165" }, { "HostName": "rhel64-test9", "IP": "192.168.20.166" }, { "HostName": "susetzb", "IP": "192.168.20.42" } ] } ;
 
 var RET_JSON          = new Object() ;
 var rc                = SDB_OK ;

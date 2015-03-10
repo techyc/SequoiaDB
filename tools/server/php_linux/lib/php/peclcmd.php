@@ -19,8 +19,8 @@
 /**
  * @nodep Gtk
  */
-if ('/opt/sequoiadb/tools/server/php/lib/php' != '@'.'include_path'.'@') {
-    ini_set('include_path', '/opt/sequoiadb/tools/server/php/lib/php');
+if ('/opt/sqldb/tools/server/php/lib/php' != '@'.'include_path'.'@') {
+    ini_set('include_path', '/opt/sqldb/tools/server/php/lib/php');
     $raw = false;
 } else {
     // this is a raw, uninstalled pear, either a cvs checkout, or php distro

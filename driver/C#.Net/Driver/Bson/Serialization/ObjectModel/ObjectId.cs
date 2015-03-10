@@ -23,7 +23,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// Represents an ObjectId (see also BsonObjectId).

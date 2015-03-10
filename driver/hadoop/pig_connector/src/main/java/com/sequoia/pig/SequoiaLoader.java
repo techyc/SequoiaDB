@@ -27,9 +27,9 @@ import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
 import org.bson.types.BasicBSONList;
 
-import com.sequoiadb.hadoop.SequoiaConfigUtil;
-import com.sequoiadb.hadoop.SequoiaInputFormat;
-import com.sequoiadb.hadoop.SequoiaRecordReader;
+import com.sqldb.hadoop.SequoiaConfigUtil;
+import com.sqldb.hadoop.SequoiaInputFormat;
+import com.sqldb.hadoop.SequoiaRecordReader;
 
 public class SequoiaLoader extends LoadFunc implements LoadMetadata {
 	private static final Log log = LogFactory.getLog(SequoiaLoader.class);

@@ -25,12 +25,12 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Attributes;
-using SequoiaDB.Bson.Serialization.Conventions;
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.Serialization.Conventions;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents a mapping between a class and a BSON document.

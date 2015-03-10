@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-namespace SequoiaDB
+namespace SqlDB
 {
 
     /** \class DBLob
@@ -59,14 +59,14 @@ namespace SequoiaDB
         private long         _readOffset;
         private bool         _isOpen = false;
     
-        // when first open/create DBLob, sequoiadb return the contextID for the
+        // when first open/create DBLob, sqldb return the contextID for the
         // further reading/writing/close
         private long _contextID ;
 
         internal DBLob(DBCollection cl)
         {
             this._cl = cl;
-            this._connection = cl.CollSpace.SequoiaDB.Connection;
+            this._connection = cl.CollSpace.SqlDB.Connection;
             this._isBigEndian = cl.isBigEndian;
             _id = ObjectId.Empty;
             _mode = -1;
@@ -96,7 +96,7 @@ namespace SequoiaDB
          *                  be generated in this function;
          *              SDB_LOB_READ
          *                  read an exist lob
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         internal void Open(ObjectId id, int mode)
@@ -137,7 +137,7 @@ namespace SequoiaDB
         /** \fn          Close()
           * \brief       Close the lob
           * \return void
-          * \exception SequoiaDB.BaseException
+          * \exception SqlDB.BaseException
           * \exception System.Exception
           */
         public void Close()
@@ -202,7 +202,7 @@ namespace SequoiaDB
          *               <code>-1</code> if there is no more data because the end of
          *               the file has been reached, or <code>0<code> if 
          *               <code>b.length</code> is Zero.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public int Read(byte[] b)
@@ -226,7 +226,7 @@ namespace SequoiaDB
          *  \brief       Writes b.length bytes from the specified 
          *               byte array to this lob. 
          *  \param       b   the data.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Write(byte[] b)
@@ -311,7 +311,7 @@ namespace SequoiaDB
          *  \param       size the adding size.
          *  \param       seekType  SDB_LOB_SEEK_SET/SDB_LOB_SEEK_CUR/SDB_LOB_SEEK_END
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Seek(long size, int seekType)
@@ -386,7 +386,7 @@ namespace SequoiaDB
         /** \fn          long GetCreateTime()
          *  \brief       get the create time of lob
          *  \return The lob's create time
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public long GetCreateTime()

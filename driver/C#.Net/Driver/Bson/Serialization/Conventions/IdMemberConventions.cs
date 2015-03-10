@@ -19,7 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents an Id member convention.

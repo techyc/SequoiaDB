@@ -22,10 +22,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     // this class is a wrapper for an object that we intend to serialize as a BsonValue
     // it is a subclass of BsonValue so that it may be used where a BsonValue is expected

@@ -2,7 +2,7 @@
 
 #******************************************************************************
 #@Destcription:
-#              SequoiaDB Port Config Or Sdbdialog Information Collect
+#              SqlDB Port Config Or Sdbdialog Information Collect
 #@Function List:
 #               sdbPortInfo[Main]
 #               sdbPortConf
@@ -41,7 +41,7 @@ function sdbPortInfo()
 function sdbPortConf()
 {
    if [ "$sdbconf" == "true" ] && [ "$PORT"X != ""X ]; then
-      #get sequoiadb config path
+      #get sqldb config path
       confpath=$installpath/conf/local
       ls $confpath/$PORT >> /dev/null 2>&1
       if [ $? -eq 0 ] ; then
@@ -116,7 +116,7 @@ function sdbCmConfLog()
 
 #******************************************************************************
 #@Destcription:
-#              SequoiaDB Snapshot Information Collect
+#              SqlDB Snapshot Information Collect
 #@Function List:
 #               sdbSnapShotInfo[Main]
 #               sdbSnapShotGeneral

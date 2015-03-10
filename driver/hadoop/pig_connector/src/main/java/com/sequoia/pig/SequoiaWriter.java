@@ -29,9 +29,9 @@ import org.apache.pig.impl.util.Utils;
 import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
 
-import com.sequoiadb.hadoop.SequoiaConfigUtil;
-import com.sequoiadb.hadoop.SequoiaOutputFormat;
-import com.sequoiadb.hadoop.SequoiaRecordWriter;
+import com.sqldb.hadoop.SequoiaConfigUtil;
+import com.sqldb.hadoop.SequoiaOutputFormat;
+import com.sqldb.hadoop.SequoiaRecordWriter;
 
 public class SequoiaWriter extends StoreFunc implements StoreMetadata {
 

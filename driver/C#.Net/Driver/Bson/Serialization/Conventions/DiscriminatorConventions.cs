@@ -19,9 +19,9 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents a discriminator convention.

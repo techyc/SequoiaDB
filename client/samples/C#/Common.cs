@@ -6,8 +6,8 @@
  *
  ******************************************************************************/
 
-using SequoiaDB;
-using SequoiaDB.Bson;
+using SqlDB;
+using SqlDB.Bson;
 using System;
 using System.Collections.Generic;
 
@@ -168,7 +168,7 @@ namespace Sample
                 // verify whether the collection space exists
                 if ("SDB_DMS_CS_NOTEXIST" == e.ErrorType)
                 {
-                    cs = CreateCollecitonSpace(cs.SequoiaDB, cs.Name);
+                    cs = CreateCollecitonSpace(cs.SqlDB, cs.Name);
                     dbc = GetColleciton(cs, cName);
                 }
                 // verify whether the collection exists
@@ -205,7 +205,7 @@ namespace Sample
                 // verify whether the collection space exists
                 if ("SDB_DMS_CS_NOTEXIST" == e.ErrorType)
                 {
-                    cs = CreateCollecitonSpace(cs.SequoiaDB, cs.Name);
+                    cs = CreateCollecitonSpace(cs.SqlDB, cs.Name);
                     dbc = CreateColleciton(cs, cName);
                 }
                 // verify whether the collection space exists

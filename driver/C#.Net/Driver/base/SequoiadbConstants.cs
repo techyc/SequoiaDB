@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     internal class SequoiadbConstants
     {

@@ -1,4 +1,4 @@
-prefix=/opt/sequoiadb/tools/server/php/libxml2
+prefix=/opt/sqldb/tools/server/php/libxml2
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

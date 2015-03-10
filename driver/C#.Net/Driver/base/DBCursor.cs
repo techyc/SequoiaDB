@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class DBCursor
      *  \brief Database collection cursor
@@ -28,7 +28,7 @@ namespace SequoiaDB
         internal DBCursor(SDBMessage rtnSDBMessage, DBCollection dbc)
         {
             this.dbc = dbc;
-            connection = dbc.CollSpace.SequoiaDB.Connection;
+            connection = dbc.CollSpace.SqlDB.Connection;
             hint = new BsonDocument();
             hint.Add("", SequoiadbConstants.CLIENT_RECORD_ID_INDEX);
             sdbMessage = new SDBMessage();
@@ -67,7 +67,7 @@ namespace SequoiaDB
         /** \fn BsonDocument Next()
          *  \brief Get the next Bson of this cursor
          *  \return BsonDocument or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public BsonDocument Next()
@@ -100,7 +100,7 @@ namespace SequoiaDB
         /** \fn BsonDocument Current()
          *  \brief Get the current Bson of this cursor
          *  \return BsonDocument or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public BsonDocument Current()
@@ -118,7 +118,7 @@ namespace SequoiaDB
         /** \fn void Close()
          *  \brief Close current cursor
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Close()
@@ -134,7 +134,7 @@ namespace SequoiaDB
         /* \fn void UpdateCurrent(BsonDocument modifier)
         *  \brief Update the current Bson of this cursor
         *  \param modifier The updating rule
-        *  \exception SequoiaDB.BaseException
+        *  \exception SqlDB.BaseException
         *  \exception System.Exception
         */
 
@@ -159,7 +159,7 @@ namespace SequoiaDB
 
         /* \fn void DeleteCurrent()
         *  \brief Delete the current Bson of this cursor
-        *  \exception SequoiaDB.BaseException
+        *  \exception SqlDB.BaseException
         *  \exception System.Exception
         */
         /*

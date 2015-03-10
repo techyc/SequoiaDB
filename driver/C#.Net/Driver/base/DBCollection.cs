@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class DBCollection
      *  \brief Database operation interfaces of collection
@@ -53,14 +53,14 @@ namespace SequoiaDB
             this.name = name;
             this.collSpace = cs;
             this.collectionFullName = cs.Name + "." + name;
-            this.connection = cs.SequoiaDB.Connection;
+            this.connection = cs.SqlDB.Connection;
             this.isBigEndian = cs.isBigEndian;
         }
 
         /* \fn void Rename(string newName)
          *  \brief Rename the collection
          *  \param newName The new collection name
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         /*
@@ -97,7 +97,7 @@ namespace SequoiaDB
     	 *		we can fill {age:30} as the splitCondition, and fill {age:60} as the splitEndCondition. when split, 
     	 *		the targe group will get the records whose age's hash value are in [30,60). If splitEndCondition is null,
     	 *		they are in [30,max).
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Split(string sourceGroupName, string destGroupName,
@@ -130,7 +130,7 @@ namespace SequoiaDB
          *  \param sourceGroupName The source group
          *  \param destGroupName The destination group
          *  \param percent percent The split percent, Range:(0.0, 100.0]
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Split(string sourceGroupName, string destGroupName, double percent)
@@ -172,7 +172,7 @@ namespace SequoiaDB
          *			 	 the targe group will get the records whose age's hash values are in [30,60). If splitEndCondition is null,
          *			 	 they are in [30,max).
          *  \return return the task id, we can use the return id to manage the sharding which is run backgroup.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
 	     *  \see listTask, cancelTask
 	     */
@@ -225,7 +225,7 @@ namespace SequoiaDB
          *  \param percent
 	     *            the split percent, Range:(0,100]
          *  \return return the task id, we can use the return id to manage the sharding which is run backgroup.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
 	     *  \see listTask, cancelTask
 	     */
@@ -270,7 +270,7 @@ namespace SequoiaDB
          *  \brief Insert a document into current collection
          *  \param insertor The Bson document of insertor, can't be null
          *  \return ObjectId
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public BsonValue Insert(BsonDocument insertor) 
@@ -316,7 +316,7 @@ namespace SequoiaDB
          *  \brief Insert a bulk of bson objects into current collection
          *  \param insertor The Bson document of insertor list, can't be null
          *  \param flag FLG_INSERT_CONTONDUP or 0
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void BulkInsert(List<BsonDocument> insertor, int flag)
@@ -353,7 +353,7 @@ namespace SequoiaDB
         /** \fn void Delete(BsonDocument matcher)
          *  \brief Delete the matching document of current collection
          *  \param matcher The matching condition
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Delete(BsonDocument matcher)
@@ -365,7 +365,7 @@ namespace SequoiaDB
          *  \brief Delete the matching document of current collection
          *  \param matcher The matching condition
          *  \param hint Hint
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Delete(BsonDocument matcher, BsonDocument hint)
@@ -403,7 +403,7 @@ namespace SequoiaDB
         /** \fn void Update(DBQuery query)
          *  \brief Update the document of current collection
          *  \param query DBQuery with matching condition, updating rule and hint
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          *  \note It won't work to update the "ShardingKey" field, but the other fields take effect
          */
@@ -417,7 +417,7 @@ namespace SequoiaDB
          *  \param matcher The matching condition
          *  \param modifier The updating rule
          *  \param hint Hint
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          *  \note It won't work to update the "ShardingKey" field, but the other fields take effect
          */
@@ -431,7 +431,7 @@ namespace SequoiaDB
          *  \param matcher The matching condition
          *  \param modifier The updating rule
          *  \param hint Hint
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          *  \note It won't work to upsert the "ShardingKey" field, but the other fields take effect
          */
@@ -443,7 +443,7 @@ namespace SequoiaDB
         /** \fn DBCursor Query()
          *  \brief Find all documents of current collection
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Query()
@@ -455,7 +455,7 @@ namespace SequoiaDB
          *  \brief Find documents of current collection with DBQuery
          *  \param query DBQuery with matching condition, selector, order rule, hint, SkipRowsCount and ReturnRowsCount
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Query(DBQuery query)
@@ -480,7 +480,7 @@ namespace SequoiaDB
          *  \param hint One of the indexs in current collection, using default index to query if not provided
          *           eg:{"":"ageIndex"}
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Query(BsonDocument query, BsonDocument selector, BsonDocument orderBy, BsonDocument hint)
@@ -499,7 +499,7 @@ namespace SequoiaDB
          *  \param skipRows Skip the first numToSkip documents, default is 0
          *  \param returnRows Only return numToReturn documents, default is -1 for returning all results
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Query(BsonDocument query, BsonDocument selector, BsonDocument orderBy, BsonDocument hint,
@@ -526,7 +526,7 @@ namespace SequoiaDB
          *                                                      when add this flag, return data in query response, it will be more high-performance
          *
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Query(BsonDocument query, BsonDocument selector, BsonDocument orderBy, BsonDocument hint,
@@ -585,7 +585,7 @@ namespace SequoiaDB
          *                the data and time information; false for not excuting query explain but get the
          *                query explain information only. e.g. {Run:true}
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Explain(BsonDocument query, BsonDocument selector, BsonDocument orderBy, BsonDocument hint,
@@ -607,7 +607,7 @@ namespace SequoiaDB
         /** \fn DBCursor GetIndexes()
          *  \brief Get all the indexes of current collection
          *  \return A cursor of all indexes or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetIndexes() 
@@ -635,7 +635,7 @@ namespace SequoiaDB
          *  \brief Get the named index of current collection
          *  \param name The index name
          *  \return A index, if not exist then return null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetIndex(string name)
@@ -671,7 +671,7 @@ namespace SequoiaDB
          *  \param isUnique Whether the index elements are unique or not
          *  \param isEnforced Whether the index is enforced unique.
          *                    This element is meaningful when isUnique is group to true.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void CreateIndex(string name, BsonDocument key, bool isUnique, bool isEnforced) 
@@ -697,7 +697,7 @@ namespace SequoiaDB
         /** \fn void DropIndex(string name)
          *  \brief Remove the named index of current collection
          *  \param name The index name
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void DropIndex(string name) 
@@ -719,7 +719,7 @@ namespace SequoiaDB
          *  \brief Get the count of matching documents in current collection
          *  \param condition The matching rule
          *  \return The count of matching documents
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
         */
         public long GetCount(BsonDocument condition)
@@ -743,7 +743,7 @@ namespace SequoiaDB
          *  \brief Execute aggregate operation in specified collection
          *  \param insertor The array of bson objects, can't be null
          *  \return The DBCursor of result or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Aggregate(List<BsonDocument> obj)
@@ -793,7 +793,7 @@ namespace SequoiaDB
          *  \param skipRows Skip the first numToSkip documents, default is 0
          *  \param returnRows Only return numToReturn documents, default is -1 for returning all results
          *  \return The DBCursor of matching infomations or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetQueryMeta(BsonDocument query, BsonDocument orderBy, BsonDocument hint,
@@ -830,7 +830,7 @@ namespace SequoiaDB
          * \param options The low boudary and up boudary
          *       eg: {"LowBound":{a:1},"UpBound":{a:100}}
          * \retval void
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public void AttachCollection(string subClFullName, BsonDocument options)
@@ -864,7 +864,7 @@ namespace SequoiaDB
          * \brief Detach the specified collection.
          * \param subClFullName The name of the subcollection
          * \retval void
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public void DetachCollection(string subClFullName)
@@ -901,7 +901,7 @@ namespace SequoiaDB
          *                    e.g. {RepliSize:0, ShardingKey:{a:1}, ShardingType:"hash", Partition:1024}
          * \note Can't alter attributes about split in partition collection; After altering a collection to
          *       be a partition collection, need to split this collection manually
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public void Alter(BsonDocument options)
@@ -929,7 +929,7 @@ namespace SequoiaDB
         /** \fn DBCursor ListLobs()
          * \brief List all of the lobs in current collection
          * \retval DBCursor of lobs
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public DBCursor ListLobs()
@@ -965,7 +965,7 @@ namespace SequoiaDB
         /** \fn DBLob CreateLob()
          * \brief Create a large object
          * \return The newly created lob object
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public DBLob CreateLob()
@@ -976,7 +976,7 @@ namespace SequoiaDB
         /** \fn DBLob CreateLob(ObjectId id)
          * \brief Create a large object with specified oid
          * \param id The oid for the creating lob
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public DBLob CreateLob(ObjectId id)
@@ -989,7 +989,7 @@ namespace SequoiaDB
         /** \fn DBLob OpenLob(ObjectId id)
          * \brief Open an existing lob with the speceifed oid
          * \param id The oid of the existing lob
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public DBLob OpenLob(ObjectId id)
@@ -1002,7 +1002,7 @@ namespace SequoiaDB
         /** \fn DBLob RemoveLob(ObjectId id)
          * \brief Remove an existing lob with the speceifed oid
          * \param id The oid of the existing lob
-         * \exception SequoiaDB.BaseException
+         * \exception SqlDB.BaseException
          * \exception System.Exception
          */
         public void RemoveLob(ObjectId id)

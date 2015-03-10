@@ -9,9 +9,9 @@
  *
  * ****************************************************************************/
 
-// Please import namespace SequoiaDB and SequoiaDB.Bson
-using SequoiaDB;
-using SequoiaDB.Bson;
+// Please import namespace SqlDB and SqlDB.Bson
+using SqlDB;
+using SqlDB.Bson;
 using System;
 using System.Collections.Generic;
 

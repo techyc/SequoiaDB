@@ -21,12 +21,12 @@ using System.Text;
 using System.Threading;
 
 // don't add using statement for MongoDB.Bson.Serialization.Serializers to minimize dependencies on DefaultSerializer
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Attributes;
-using SequoiaDB.Bson.Serialization.Conventions;
-using SequoiaDB.Bson.Serialization.IdGenerators;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.Serialization.Conventions;
+using SqlDB.Bson.Serialization.IdGenerators;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// A static class that represents the BSON serialization functionality.

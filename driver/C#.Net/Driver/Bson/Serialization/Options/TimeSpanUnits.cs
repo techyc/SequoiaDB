@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.Serialization.Options
+namespace SqlDB.Bson.Serialization.Options
 {
     /// <summary>
     /// Represents the units a TimeSpan is serialized in.

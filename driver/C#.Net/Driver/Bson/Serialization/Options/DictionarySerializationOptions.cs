@@ -15,11 +15,11 @@
 
 using System;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Attributes;
-using SequoiaDB.Bson.Serialization.Serializers;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.Serialization.Serializers;
 
-namespace SequoiaDB.Bson.Serialization.Options
+namespace SqlDB.Bson.Serialization.Options
 {
     /// <summary>
     /// Represents the representation to use for dictionaries.

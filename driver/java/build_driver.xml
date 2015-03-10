@@ -106,10 +106,10 @@
      		</echo>
      		
      		<echo>
-     			/usr/bin/gcc  ${base.dir}/temp/print_version.c -o ${base.dir}/temp/print_version -I${base.dir}/../../SequoiaDB/engine/include
+     			/usr/bin/gcc  ${base.dir}/temp/print_version.c -o ${base.dir}/temp/print_version -I${base.dir}/../../SqlDB/engine/include
      		</echo>
      		<exec executable="/usr/bin/gcc" dir="${base.dir}" failonerror="true">
-           <arg line="${base.dir}/temp/print_version.c -o ${base.dir}/temp/print_version -I${base.dir}/../../SequoiaDB/engine/include" />
+           <arg line="${base.dir}/temp/print_version.c -o ${base.dir}/temp/print_version -I${base.dir}/../../SqlDB/engine/include" />
         </exec>
         <exec executable="${base.dir}/temp/print_version" dir="${base.dir}" failonerror="false" outputproperty="project.version" />
 
@@ -123,9 +123,9 @@
     <propertyfile file="${base.dir}/build/version">
        <entry key="Release" value="${svn.version}"/>
        <entry key="build.time" value="${current.time}"/>
-       <entry key="SequoiaDB_version" value="${project.version}"/>
+       <entry key="SqlDB_version" value="${project.version}"/>
     </propertyfile>
-    <jar file="${base.dir}/sequoiadb.jar" >
+    <jar file="${base.dir}/sqldb.jar" >
        <manifest>
        </manifest>
        <fileset dir="${base.dir}/build"/>

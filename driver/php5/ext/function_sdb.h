@@ -1,5 +1,5 @@
 /*******************************************************************************
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ using namespace sdbclient ;
 #define INC_BUF_SIZE 4096
 #define BUF_BSON_ID "_id"
 
-/*********** sequoiadb *****************/
+/*********** sqldb *****************/
 INT32 connect ( sdb *connection, const CHAR * hostName ) ;
 
 INT32 connect ( sdb *connection,
@@ -99,7 +99,7 @@ INT32 listDomains( sdb *connection, sdbCursor **query,
 INT32 activateGroup ( sdb *connection,
                       const CHAR *groupName ) ;
 */
-/************ sequoiadb_CS *********************/
+/************ sqldb_CS *********************/
 
 INT32 selectCollection ( sdbCollectionSpace *cs,
                          sdbCollection **collection,
@@ -113,7 +113,7 @@ const CHAR *getCSName ( sdbCollectionSpace *cs ) ;
 INT32 dropCollection ( sdbCollectionSpace *cs,
                        const CHAR *pClName ) ;
 
-/*********** sequoiadb_collection ******************/
+/*********** sqldb_collection ******************/
 
 INT32 insertData ( sdbCollection *collection, CHAR **json_str ) ;
 

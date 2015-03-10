@@ -1,5 +1,5 @@
 # -*- mode: python; -*-
-# build file for SequoiaDB
+# build file for SqlDB
 # this requires scons
 # you can get from http://www.scons.org
 # then just type scons
@@ -26,7 +26,7 @@ import stat
 from os.path import join, dirname, abspath
 import libdeps
 root_dir = dirname(File('SConstruct').rfile().abspath)
-db_dir = join(root_dir,'SequoiaDB')
+db_dir = join(root_dir,'SqlDB')
 engine_dir = join(db_dir,'engine')
 thirdparty_dir = join(root_dir, 'thirdparty')
 boost_dir = join(thirdparty_dir, 'boost')
@@ -321,7 +321,7 @@ else:
 
 env['PROCESSOR_ARCHITECTURE'] = processor
 
-DEFAULT_INSTALL_DIR = "/opt/sequoiadb"
+DEFAULT_INSTALL_DIR = "/opt/sqldb"
 installDir = DEFAULT_INSTALL_DIR
 nixLibPrefix = "lib"
 
@@ -695,11 +695,11 @@ Export("guess_os")
 if not os.path.isfile ( "gitbuild" ):
    if guess_os == "win32":
       # In windows platform, we take advantage of SubWCRev
-      os.system ("SubWCRev . misc/autogen/ossVer.tmp SequoiaDB/engine/include/ossVer_Autogen.h")
+      os.system ("SubWCRev . misc/autogen/ossVer.tmp SqlDB/engine/include/ossVer_Autogen.h")
    else:
       # In NIX platform, we use svn and sed to send to ossVer_Autogen.h
       os.system("sed \"s/WCREV/$(svn info | grep Revision | awk '{print $2}')/g\" misc/autogen/ossVer.tmp > oss.tmp")
-      os.system("sed 's/\$//g' oss.tmp > SequoiaDB/engine/include/ossVer_Autogen.h")
+      os.system("sed 's/\$//g' oss.tmp > SqlDB/engine/include/ossVer_Autogen.h")
 
 language = get_option ( "language" )
 if language is None:
@@ -708,7 +708,7 @@ else:
    os.system ( "scons -C misc/autogen --language=" + language )
 
 if hasEngine:
-   env.SConscript( 'SequoiaDB/SConscript', variant_dir=variantDir, duplicate=False )
+   env.SConscript( 'SqlDB/SConscript', variant_dir=variantDir, duplicate=False )
 
 # Convert javascript files to a cpp file
 print 'Convert js files to cpp'
@@ -717,17 +717,17 @@ import jsToCpp
 jsToCpp.jsToCpp(engine_dir)
 
 if hasClient:
-   clientCppEnv.SConscript( 'SequoiaDB/SConscriptClientCpp', variant_dir=clientCppVariantDir, duplicate=False )
-   clientCEnv.SConscript ( 'SequoiaDB/SConscriptClientC', variant_dir=clientCVariantDir, duplicate=False )
+   clientCppEnv.SConscript( 'SqlDB/SConscriptClientCpp', variant_dir=clientCppVariantDir, duplicate=False )
+   clientCEnv.SConscript ( 'SqlDB/SConscriptClientC', variant_dir=clientCVariantDir, duplicate=False )
 
 if hasShell:
-   shellEnv.SConscript ( 'SequoiaDB/SConscriptShell', variant_dir=shellVariantDir, duplicate=False )
+   shellEnv.SConscript ( 'SqlDB/SConscriptShell', variant_dir=shellVariantDir, duplicate=False )
 
 if hasTool:
-   toolEnv.SConscript ( 'SequoiaDB/SConscriptTool', variant_dir=toolVariantDir, duplicate=False )
+   toolEnv.SConscript ( 'SqlDB/SConscriptTool', variant_dir=toolVariantDir, duplicate=False )
 if hasFmp:
-   fmpEnv.SConscript ( 'SequoiaDB/SConscriptFmp', variant_dir=fmpVariantDir, duplicate=False )
+   fmpEnv.SConscript ( 'SqlDB/SConscriptFmp', variant_dir=fmpVariantDir, duplicate=False )
 #if hasTestcase:
-#   env.SConscript( 'SequoiaDB/SConscript', variant_dir=variantDir, duplicate=False )
+#   env.SConscript( 'SqlDB/SConscript', variant_dir=variantDir, duplicate=False )
 if hasFap:
-   fapEnv.SConscript ( 'SequoiaDB/SConscriptFap', variant_dir=fapVariantDir, duplicate=False )
+   fapEnv.SConscript ( 'SqlDB/SConscriptFap', variant_dir=fapVariantDir, duplicate=False )

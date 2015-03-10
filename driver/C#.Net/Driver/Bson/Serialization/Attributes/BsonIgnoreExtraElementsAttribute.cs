@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.Serialization.Attributes
+namespace SqlDB.Bson.Serialization.Attributes
 {
     /// <summary>
     /// Specifies whether extra elements should be ignored when this class is deserialized.

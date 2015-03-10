@@ -6,53 +6,53 @@ import sys
 import os
 
 driverFiles = [
-   "pysequoiadb/pysequoiadb.cpp"
+   "pysqldb/pysqldb.cpp"
    ]
 
 clientFiles = [
-   path + "SequoiaDB/engine/client/clientcpp.cpp"
+   path + "SqlDB/engine/client/clientcpp.cpp"
       ]
 clientLibFiles = [
-   path + "SequoiaDB/engine/oss/oss.c",
-   path + "SequoiaDB/engine/oss/oss.cpp",
-   path + "SequoiaDB/engine/oss/ossUtil.c",
-   path + "SequoiaDB/engine/oss/ossUtil.cpp",
-   path + "SequoiaDB/engine/oss/ossMem.c",
-   path + "SequoiaDB/engine/oss/ossMem.cpp",
-   path + "SequoiaDB/engine/oss/ossVer.c",
-   path + "SequoiaDB/engine/oss/ossVer.cpp",
-   path + "SequoiaDB/engine/oss/ossSocket.cpp",
-   path + "SequoiaDB/engine/oss/ossPrimitiveFileOp.cpp",
-   path + "SequoiaDB/engine/pd/pd.cpp",
-   path + "SequoiaDB/engine/pd/pdTrace.cpp",
-   path + "SequoiaDB/engine/pd/pdFunctionList.cpp",
-   path + "SequoiaDB/engine/client/bson/numbers.c",
-   path + "SequoiaDB/engine/client/bson/bson.c",
-   path + "SequoiaDB/engine/client/bson/encoding.c",
-   path + "SequoiaDB/engine/client/common.c",
-   path + "SequoiaDB/engine/client/cJSON.c",
-   path + "SequoiaDB/engine/client/jstobs.c",
-   path + "SequoiaDB/engine/client/base64c.c",
-   path + "SequoiaDB/engine/util/fromjson.cpp",
-   path + "SequoiaDB/engine/util/json2rawbson.c",
-   path + "SequoiaDB/engine/util/utilStr.cpp",
-   path + "SequoiaDB/engine/bson/bsonobj.cpp",
-   path + "SequoiaDB/engine/bson/oid.cpp",
-   path + "SequoiaDB/engine/bson/md5.c",
-   path + "SequoiaDB/engine/bson/base64.cpp",
-   path + "SequoiaDB/engine/bson/nonce.cpp",
-   path + "SequoiaDB/engine/util/fromjson.hpp",
-   path + "SequoiaDB/engine/util/json2rawbson.h",
-   path + "SequoiaDB/engine/include/utilStr.hpp",
-   path + "SequoiaDB/engine/client/base64c.h"
+   path + "SqlDB/engine/oss/oss.c",
+   path + "SqlDB/engine/oss/oss.cpp",
+   path + "SqlDB/engine/oss/ossUtil.c",
+   path + "SqlDB/engine/oss/ossUtil.cpp",
+   path + "SqlDB/engine/oss/ossMem.c",
+   path + "SqlDB/engine/oss/ossMem.cpp",
+   path + "SqlDB/engine/oss/ossVer.c",
+   path + "SqlDB/engine/oss/ossVer.cpp",
+   path + "SqlDB/engine/oss/ossSocket.cpp",
+   path + "SqlDB/engine/oss/ossPrimitiveFileOp.cpp",
+   path + "SqlDB/engine/pd/pd.cpp",
+   path + "SqlDB/engine/pd/pdTrace.cpp",
+   path + "SqlDB/engine/pd/pdFunctionList.cpp",
+   path + "SqlDB/engine/client/bson/numbers.c",
+   path + "SqlDB/engine/client/bson/bson.c",
+   path + "SqlDB/engine/client/bson/encoding.c",
+   path + "SqlDB/engine/client/common.c",
+   path + "SqlDB/engine/client/cJSON.c",
+   path + "SqlDB/engine/client/jstobs.c",
+   path + "SqlDB/engine/client/base64c.c",
+   path + "SqlDB/engine/util/fromjson.cpp",
+   path + "SqlDB/engine/util/json2rawbson.c",
+   path + "SqlDB/engine/util/utilStr.cpp",
+   path + "SqlDB/engine/bson/bsonobj.cpp",
+   path + "SqlDB/engine/bson/oid.cpp",
+   path + "SqlDB/engine/bson/md5.c",
+   path + "SqlDB/engine/bson/base64.cpp",
+   path + "SqlDB/engine/bson/nonce.cpp",
+   path + "SqlDB/engine/util/fromjson.hpp",
+   path + "SqlDB/engine/util/json2rawbson.h",
+   path + "SqlDB/engine/include/utilStr.hpp",
+   path + "SqlDB/engine/client/base64c.h"
    ]
 
 clientLibFiles2 = [
-   path + "SequoiaDB/engine/client/bson/bson.h",
-   path + "SequoiaDB/engine/client/bson/encoding.h",
-   path + "SequoiaDB/engine/client/bson/numbers.c",
-   path + "SequoiaDB/engine/client/bson/bson.c",
-   path + "SequoiaDB/engine/client/bson/encoding.c"
+   path + "SqlDB/engine/client/bson/bson.h",
+   path + "SqlDB/engine/client/bson/encoding.h",
+   path + "SqlDB/engine/client/bson/numbers.c",
+   path + "SqlDB/engine/client/bson/bson.c",
+   path + "SqlDB/engine/client/bson/encoding.c"
    ]
 
 env.Execute(Mkdir(curPath + "/build/temp"))
@@ -97,15 +97,15 @@ srcFiles = [
 driver   = env.SharedLibrary("sdb",   [driverFiles, srcFiles])
 
 base = []
-base.append(env.Install("#/pysequoiadb", driver))
+base.append(env.Install("#/pysqldb", driver))
 
 if sys.platform == 'win32':
    pass
 else:
    act = []
-   act.append("mv ./pysequoiadb/libsdb.so ./pysequoiadb/sdb.so")
-   act.append("tar -zcvf pysequoiadb.tar.gz   \
-               ./bson ./pysequoiadb ./setup.py \
+   act.append("mv ./pysqldb/libsdb.so ./pysqldb/sdb.so")
+   act.append("tar -zcvf pysqldb.tar.gz   \
+               ./bson ./pysqldb ./setup.py \
                --exclude-vcs")
 
    run = env.Command(target = None, source = base, action = act )

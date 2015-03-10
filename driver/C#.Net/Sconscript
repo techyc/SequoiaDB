@@ -18,4 +18,4 @@ csEnv['LIB'] = dirname(File('SConscript').rfile().abspath) + os.sep + 'Driver\Bs
 csEnv['CSCLIBCOM'] = SCons.Action.Action(csclibcom)
 
 sourceFiles = [] 
-csEnv.CLILibrary('sequoiadb.dll', sourceFiles)
+csEnv.CLILibrary('sqldb.dll', sourceFiles)

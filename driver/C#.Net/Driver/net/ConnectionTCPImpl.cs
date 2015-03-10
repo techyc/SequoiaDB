@@ -5,7 +5,7 @@ using System;
 using System.Threading;
 
 
-namespace SequoiaDB
+namespace SqlDB
 {
     internal class ConnectionTCPImpl : IConnection
     {

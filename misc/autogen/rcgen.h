@@ -8,13 +8,13 @@
 
 #define RCALIGN 32
 #define RCXMLSRC "rclist.xml"
-#define CPPPATH "../../SequoiaDB/engine/oss/ossErr.cpp"
-#define CPATH "../../SequoiaDB/engine/include/ossErr.h"
+#define CPPPATH "../../SqlDB/engine/oss/ossErr.cpp"
+#define CPATH "../../SqlDB/engine/include/ossErr.h"
 #define CSPATH "../../driver/C#.Net/Driver/exception/Errors.cs"
 #define JAVAPATH "../../driver/java/src/main/resources/errors.properties"
-#define JSPATH "../../SequoiaDB/engine/spt/error.js"
+#define JSPATH "../../SqlDB/engine/spt/error.js"
 #define WEBPATH "../../client/admin/admintpl/error_"
-#define PYTHONPATH "../../driver/python/pysequoiadb/err.prop"
+#define PYTHONPATH "../../driver/python/pysqldb/err.prop"
 #define WEBPATHSUFFIX ".php"
 #define DOCPATH "../../doc/references/exceptionmapping/topics/exceptionmapping_"
 #define DOCPATHSUFFIX ".dita"

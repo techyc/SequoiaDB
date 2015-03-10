@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.Serialization.Attributes
+namespace SqlDB.Bson.Serialization.Attributes
 {
     /// <summary>
     /// Specifies the element name and related options for a field or property.

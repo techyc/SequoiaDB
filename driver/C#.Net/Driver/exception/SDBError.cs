@@ -1,5 +1,5 @@
 ﻿
-namespace SequoiaDB
+namespace SqlDB
 {
     class SDBError
     {

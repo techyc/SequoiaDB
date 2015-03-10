@@ -12,19 +12,19 @@ Root user:
 note: default path is /usr/local/pgsql/
 
 normal user:
-4) cd /home/sequoiadb/trunk/driver/postgresql
+4) cd /home/sqldb/trunk/driver/postgresql
 5) PATH=/usr/local/pgsql934/bin:$PATH make local
 6) PATH=/usr/local/pgsql934/bin:$PATH make all
 
 Root user:
-7) cd /home/sequoiadb/trunk/driver/postgresql
+7) cd /home/sqldb/trunk/driver/postgresql
 8) PATH=/usr/local/pgsql934/bin:$PATH make install
 9) mkdir /usr/local/pgsql934/data
 10) chown postgres /usr/local/pgsql934/*
 11) su - postgres
 
 normal user:
-12) start sequoiadb and create cs.cl
+12) start sqldb and create cs.cl
 
 13) insert record
 { a: 1, b: 2, c: "hello world" }

@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Name: replicaGroup.cpp
- * Description: This program demostrates how to connect to SequoiaDB database,
+ * Description: This program demostrates how to connect to SqlDB database,
  *              list/get replicaGroup/node, and create new node.
  * Parameters:
  *              HostName: The hostname for database server

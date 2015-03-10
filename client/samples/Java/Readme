@@ -1,2 +1,2 @@
-../../java/jdk/javac com/sequoiadb/samples/Sql.java com/sequoiadb/samples/Constants.java -classpath ../../java/sequoiadb.jar
-../../java/jdk/jre/java -classpath ../../java/sequoiadb.jar:. com.sequoiadb.samples.Sql
+../../java/jdk/javac com/sqldb/samples/Sql.java com/sqldb/samples/Constants.java -classpath ../../java/sqldb.jar
+../../java/jdk/jre/java -classpath ../../java/sqldb.jar:. com.sqldb.samples.Sql

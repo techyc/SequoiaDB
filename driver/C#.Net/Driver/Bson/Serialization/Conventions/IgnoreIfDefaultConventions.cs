@@ -16,7 +16,7 @@
 using System;
 using System.Reflection;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents an ignore if default convention.

@@ -15,10 +15,10 @@
 
 using System;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Attributes;
 
-namespace SequoiaDB.Bson.Serialization.Options
+namespace SqlDB.Bson.Serialization.Options
 {
     /// <summary>
     /// Represents serialization options for a document.

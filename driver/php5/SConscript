@@ -5,7 +5,7 @@ Import("clienttestBuild")
 Import("phpedition")
 
 phpFiles = [
-      "ext/sequoiadb.cpp",
+      "ext/sqldb.cpp",
       "ext/function_sdb.cpp",
       ]
 testFiles = [
@@ -15,49 +15,49 @@ clienttestFiles = [
       root_dir + "/test/clienttest.cpp"
       ]
 clientFiles = [
-      root_dir + "/../../SequoiaDB/engine/client/clientcpp.cpp"
+      root_dir + "/../../SqlDB/engine/client/clientcpp.cpp"
       ]
 #for threadsafe build, we should add this into clientLibFiles
 clientThreadSafe = [
-      root_dir + "/../../SequoiaDB/engine/oss/ossLatch.cpp"
+      root_dir + "/../../SqlDB/engine/oss/ossLatch.cpp"
       ]
 clientLibFiles = [
-      root_dir + "/../../SequoiaDB/engine/oss/oss.c",
-      root_dir + "/../../SequoiaDB/engine/oss/oss.cpp",
-      root_dir + "/../../SequoiaDB/engine/oss/ossUtil.c",
-      root_dir + "/../../SequoiaDB/engine/oss/ossUtil.cpp",
-      root_dir + "/../../SequoiaDB/engine/oss/ossSocket.cpp",
-      root_dir + "/../../SequoiaDB/engine/msg/msgMessage.cpp",
-      root_dir + "/../../SequoiaDB/engine/oss/ossMem.c",
-      root_dir + "/../../SequoiaDB/engine/oss/ossMem.cpp",
-      root_dir + "/../../SequoiaDB/engine/pd/pd.cpp",
-      root_dir + "/../../SequoiaDB/engine/pd/pdTrace.cpp",
-      root_dir + "/../../SequoiaDB/engine/pd/pdFunctionList.cpp",
-      root_dir + "/../../SequoiaDB/engine/pd/pdComponents.cpp",
-      root_dir + "/../../SequoiaDB/engine/oss/ossPrimitiveFileOp.cpp",
-      root_dir + "/../../SequoiaDB/engine/client/common.c",
-      root_dir + "/../../SequoiaDB/engine/client/cJSON.c",
-      root_dir + "/../../SequoiaDB/engine/client/jstobs.c",
-      root_dir + "/../../SequoiaDB/engine/client/base64c.c",
-      root_dir + "/../../SequoiaDB/engine/util/fromjson.cpp",
-      root_dir + "/../../SequoiaDB/engine/util/json2rawbson.c",
-      root_dir + "/../../SequoiaDB/engine/bson/bsonobj.cpp",
-      root_dir + "/../../SequoiaDB/engine/bson/oid.cpp",
-      root_dir + "/../../SequoiaDB/engine/bson/md5.c",
-      root_dir + "/../../SequoiaDB/engine/bson/base64.cpp",
-      root_dir + "/../../SequoiaDB/engine/bson/nonce.cpp",
-      root_dir + "/../../SequoiaDB/engine/util/fromjson.hpp",
-      root_dir + "/../../SequoiaDB/engine/util/json2rawbson.h",
-      root_dir + "/../../SequoiaDB/engine/include/utilStr.hpp",
-      root_dir + "/../../SequoiaDB/engine/util/utilStr.cpp",
-      root_dir + "/../../SequoiaDB/engine/client/base64c.h"
+      root_dir + "/../../SqlDB/engine/oss/oss.c",
+      root_dir + "/../../SqlDB/engine/oss/oss.cpp",
+      root_dir + "/../../SqlDB/engine/oss/ossUtil.c",
+      root_dir + "/../../SqlDB/engine/oss/ossUtil.cpp",
+      root_dir + "/../../SqlDB/engine/oss/ossSocket.cpp",
+      root_dir + "/../../SqlDB/engine/msg/msgMessage.cpp",
+      root_dir + "/../../SqlDB/engine/oss/ossMem.c",
+      root_dir + "/../../SqlDB/engine/oss/ossMem.cpp",
+      root_dir + "/../../SqlDB/engine/pd/pd.cpp",
+      root_dir + "/../../SqlDB/engine/pd/pdTrace.cpp",
+      root_dir + "/../../SqlDB/engine/pd/pdFunctionList.cpp",
+      root_dir + "/../../SqlDB/engine/pd/pdComponents.cpp",
+      root_dir + "/../../SqlDB/engine/oss/ossPrimitiveFileOp.cpp",
+      root_dir + "/../../SqlDB/engine/client/common.c",
+      root_dir + "/../../SqlDB/engine/client/cJSON.c",
+      root_dir + "/../../SqlDB/engine/client/jstobs.c",
+      root_dir + "/../../SqlDB/engine/client/base64c.c",
+      root_dir + "/../../SqlDB/engine/util/fromjson.cpp",
+      root_dir + "/../../SqlDB/engine/util/json2rawbson.c",
+      root_dir + "/../../SqlDB/engine/bson/bsonobj.cpp",
+      root_dir + "/../../SqlDB/engine/bson/oid.cpp",
+      root_dir + "/../../SqlDB/engine/bson/md5.c",
+      root_dir + "/../../SqlDB/engine/bson/base64.cpp",
+      root_dir + "/../../SqlDB/engine/bson/nonce.cpp",
+      root_dir + "/../../SqlDB/engine/util/fromjson.hpp",
+      root_dir + "/../../SqlDB/engine/util/json2rawbson.h",
+      root_dir + "/../../SqlDB/engine/include/utilStr.hpp",
+      root_dir + "/../../SqlDB/engine/util/utilStr.cpp",
+      root_dir + "/../../SqlDB/engine/client/base64c.h"
       ]
 clientLibFiles2 = [
-      root_dir + "/../../SequoiaDB/engine/client/bson/numbers.c",
-      root_dir + "/../../SequoiaDB/engine/client/bson/bson.h",
-      root_dir + "/../../SequoiaDB/engine/client/bson/encoding.h",
-      root_dir + "/../../SequoiaDB/engine/client/bson/bson.c",
-      root_dir + "/../../SequoiaDB/engine/client/bson/encoding.c"
+      root_dir + "/../../SqlDB/engine/client/bson/numbers.c",
+      root_dir + "/../../SqlDB/engine/client/bson/bson.h",
+      root_dir + "/../../SqlDB/engine/client/bson/encoding.h",
+      root_dir + "/../../SqlDB/engine/client/bson/bson.c",
+      root_dir + "/../../SqlDB/engine/client/bson/encoding.c"
       ]
 env.Execute(Mkdir(root_dir + "/ext/temp"))
 env.Execute(Mkdir(root_dir + "/ext/temp/bson"))

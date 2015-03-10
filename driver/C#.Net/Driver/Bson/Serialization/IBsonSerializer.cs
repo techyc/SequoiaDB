@@ -15,9 +15,9 @@
 
 using System;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// An interface implemented by BSON serializers.

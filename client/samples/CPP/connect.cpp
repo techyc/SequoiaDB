@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Name: connect.cpp
- * Description: This program demostrates how to connect to SequoiaDB database.
+ * Description: This program demostrates how to connect to SqlDB database.
  *
  * Parameters:
  *              HostName: The hostname for database server

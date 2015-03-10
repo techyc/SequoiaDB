@@ -162,7 +162,7 @@ void OptGen::genHeaderC ()
         exit(0);
     }
     string comment =
-        "/*    Copyright 2012 SequoiaDB Inc.\n"
+        "/*    Copyright 2012 SqlDB Inc.\n"
         " *\n"
         " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
         " *    you may not use this file except in compliance with the License.\n"
@@ -176,7 +176,7 @@ void OptGen::genHeaderC ()
         " *    See the License for the specific language governing permissions and\n"
         " *    limitations under the License.\n"
         " */\n"
-        "/*    Copyright (C) 2011-2014 SequoiaDB Ltd.\n"
+        "/*    Copyright (C) 2011-2014 SqlDB Ltd.\n"
         " *    This program is free software: you can redistribute it and/or modify\n"
         " *    it under the term of the GNU Affero General Public License, version 3,\n"
         " *    as published by the Free Software Foundation.\n"
@@ -191,7 +191,7 @@ void OptGen::genHeaderC ()
         " */\n";
     fout<<std::left<<comment<<endl;
     comment = "\n// This Header File is automatically generated, you MUST NOT modify this file anyway!\n"
-              "// On the contrary, you can modify the xml file \"sequoiadb/misc/autogen/optlist.xml\" if necessary!\n";
+              "// On the contrary, you can modify the xml file \"sqldb/misc/autogen/optlist.xml\" if necessary!\n";
     fout<<comment<<endl;
 
     fout<<"#ifndef PMDOPTIONS_H_"<<endl ;
@@ -215,7 +215,7 @@ void OptGen::genHeaderCpp ()
         exit(0);
     }
     string comment =
-        "/*    Copyright 2012 SequoiaDB Inc.\n"
+        "/*    Copyright 2012 SqlDB Inc.\n"
         " *\n"
         " *    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
         " *    you may not use this file except in compliance with the License.\n"
@@ -229,7 +229,7 @@ void OptGen::genHeaderCpp ()
         " *    See the License for the specific language governing permissions and\n"
         " *    limitations under the License.\n"
         " */\n"
-        "/*    Copyright (C) 2011-2014 SequoiaDB Ltd.\n"
+        "/*    Copyright (C) 2011-2014 SqlDB Ltd.\n"
         " *    This program is free software: you can redistribute it and/or modify\n"
         " *    it under the term of the GNU Affero General Public License, version 3,\n"
         " *    as published by the Free Software Foundation.\n"
@@ -244,7 +244,7 @@ void OptGen::genHeaderCpp ()
         " */\n";
     fout<<std::left<<comment<<endl;
     comment = "\n// This Header File is automatically generated, you MUST NOT modify this file anyway!\n"
-              "// On the contrary, you can modify the xml file \"sequoiadb/misc/autogen/optlist.xml\" if necessary!\n";
+              "// On the contrary, you can modify the xml file \"sqldb/misc/autogen/optlist.xml\" if necessary!\n";
     fout<<comment<<endl;
 
     fout<<"#ifndef PMDOPTIONS_HPP_"<<endl
@@ -292,7 +292,7 @@ void OptGen::genHeaderCpp ()
 void OptGen::genSampleHeader ( ofstream &fout )
 {
     string comment =
-        "# SequoiaDB configuration\n" ;
+        "# SqlDB configuration\n" ;
     fout<<std::left<<comment<<endl;
 }
 

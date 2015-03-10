@@ -90,7 +90,7 @@ else if ( $model == "update" )
 }
 else if ( $model == "testlink" )
 {
-	$db_t = new SequoiaDB() ;
+	$db_t = new SqlDB() ;
 	$arr = $db_t -> connect ( $address, $user, $pwd ) ;
 	$rc = $arr['errno'] ;
 	if ( $arr['errno'] == 0 )
@@ -109,7 +109,7 @@ else if ( $model == "connect" )
 	$_SESSION['sdb_monitor_address'] = $address ;
 	$_SESSION['sdb_monitor_user'] = $user ;
 	$_SESSION['sdb_monitor_password'] = $pwd ;
-	$db_t = new SequoiaDB() ;
+	$db_t = new SqlDB() ;
 	$arr = $db_t -> connect ( $address, $user, $pwd ) ;
 	$rc = $arr['errno'] ;
 	$return_arr = array( 'errno' => $rc, 'message' => (array_key_exists( $rc, $errno_cn ) ? $errno_cn[$rc] : $rc)  ) ;

@@ -1,8 +1,8 @@
 #! /bin/sh
 
 SED="/bin/sed"
-prefix="/opt/sequoiadb/tools/server/php"
-datarootdir="/opt/sequoiadb/tools/server/php/php"
+prefix="/opt/sqldb/tools/server/php"
+datarootdir="/opt/sqldb/tools/server/php/php"
 exec_prefix="${prefix}"
 version="5.4.13"
 vernum="50413"
@@ -10,14 +10,14 @@ include_dir="${prefix}/include/php"
 includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
 ldflags=""
 libs="-lcrypt   -lresolv -lcrypt -lrt -lrt -lm -ldl -lnsl  -lxml2 -lz -lm -lxml2 -lz -lm -lxml2 -lz -lm -lcrypt -lxml2 -lz -lm -lxml2 -lz -lm -lxml2 -lz -lm -lcrypt "
-extension_dir='/opt/sequoiadb/tools/server/php/lib/php/extensions/no-debug-non-zts-20100525'
+extension_dir='/opt/sqldb/tools/server/php/lib/php/extensions/no-debug-non-zts-20100525'
 man_dir=`eval echo ${datarootdir}/man`
 program_prefix=""
 program_suffix=""
 exe_extension=""
 php_cli_binary=NONE
 php_cgi_binary=NONE
-configure_options=" '--prefix=/opt/sequoiadb/tools/server/php' '--with-libxml2-dir=/opt/sequoiadb/tools/server/php/libxml2'"
+configure_options=" '--prefix=/opt/sqldb/tools/server/php' '--with-libxml2-dir=/opt/sqldb/tools/server/php/libxml2'"
 php_sapis=" cli cgi"
 
 # Set php_cli_binary and php_cgi_binary if available

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="hadoop-connector" default="jar" >
 	<property name="build.dir"  value="${basedir}/build"/>
-	<property name="java.driver.jar" value="${basedir}/../../java/sequoiadb.jar"/>		
+	<property name="java.driver.jar" value="${basedir}/../../java/sqldb.jar"/>		
 	
 	<target name="init">
 		<delete dir="${build.dir}" />

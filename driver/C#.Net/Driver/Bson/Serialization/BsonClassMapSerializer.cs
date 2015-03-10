@@ -22,10 +22,10 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents a serializer for a class map.

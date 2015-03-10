@@ -22,11 +22,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization.Serializers
+namespace SqlDB.Bson.Serialization.Serializers
 {
     /// <summary>
     /// Represents a serializer for Booleans.

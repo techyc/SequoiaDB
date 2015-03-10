@@ -20,10 +20,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
 
     /// <summary>

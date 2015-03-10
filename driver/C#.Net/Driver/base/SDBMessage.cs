@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     internal class SDBMessage
     {

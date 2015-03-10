@@ -485,7 +485,7 @@ function create_node( table_name )
 	window.setTimeout( "pd_check_end_c_n()", 500 ) ;
 }
 
-//安装sequoiadb
+//安装sqldb
 function install_the_file()
 {
 	switch_next_start_button(3);
@@ -2275,13 +2275,13 @@ function add_link_host_to_list( source_name, dest_name )
 			var c2 = tab_row.insertCell( 2 ) ;
 			c2.innerHTML = source_obj.rows[i].cells[2].innerHTML ;
 			var c3 = tab_row.insertCell( 3 ) ;
-			c3.innerHTML = "/opt/sequoiadb" ;
+			c3.innerHTML = "/opt/sqldb" ;
 			var c4 = tab_row.insertCell( 4 ) ;
 			c4.innerHTML = "sdbadmin_group" ;
 			var c5 = tab_row.insertCell( 5 ) ;
 			c5.innerHTML = "sdbadmin" ;
 			var c6 = tab_row.insertCell( 6 ) ;
-			c6.innerHTML = "sequoiadb" ;
+			c6.innerHTML = "sqldb" ;
 		}
 	}
 }

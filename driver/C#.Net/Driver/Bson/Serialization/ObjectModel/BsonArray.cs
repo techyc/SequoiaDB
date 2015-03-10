@@ -20,9 +20,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// Represents a BSON array.

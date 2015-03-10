@@ -1,4 +1,4 @@
-﻿using SequoiaDB;
+﻿using SqlDB;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

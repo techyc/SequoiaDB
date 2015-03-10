@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 @modify list:
    2014-7-26 Zhaobo Tan  Init
 @parameter
-   BUS_JSON: the format is: {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/home/users/tanzhaobo/sequoiadb/bin/../packet/sequoiadb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.166","HostName":"rhel64-test9","User":"root","Passwd":"sequoiadb","SshPort":"22","AgentPort":"11790","InstallPath":"/opt/sequoiadb"}}
+   BUS_JSON: the format is: {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/home/users/tanzhaobo/sqldb/bin/../packet/sqldb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.166","HostName":"rhel64-test9","User":"root","Passwd":"sqldb","SshPort":"22","AgentPort":"11790","InstallPath":"/opt/sqldb"}}
    SYS_JSON: {}
    ENV_JSON: {}
    OTHER_JSON: {}
@@ -37,7 +37,7 @@ var errMsg         = "" ;
 @parameter
    osInfo[string]: os type
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
 @return
    packetname[string]: the name of the install packet
 ***************************************************************************** */
@@ -115,7 +115,7 @@ function createTmpDir( ssh, osInfo )
    ssh[object]: Ssh object
    osInfo[string]: os type
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
 @return void
 ***************************************************************************** */
 function pushInstallPacket( ssh, osInfo, packet )
@@ -197,10 +197,10 @@ function uninstallDBPacket ( ssh, osInfo, path )
 @parameter
    ssh[object]: Ssh object
    osInfo[string]: os type
-   sdbuser[string]: the user to be add for running sequoiadb program
+   sdbuser[string]: the user to be add for running sqldb program
    sdbpasswd[string]: the password of sdbuser
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
    path[string]: the path where the install packet is in local host, we need 
                  to push this packet to remote host
 @return void

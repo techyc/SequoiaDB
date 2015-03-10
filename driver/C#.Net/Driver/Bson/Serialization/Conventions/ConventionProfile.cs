@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents a set of conventions.

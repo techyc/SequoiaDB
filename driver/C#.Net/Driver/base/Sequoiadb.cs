@@ -2,14 +2,14 @@
 using System.Security.Cryptography;
 using System.Text;
 using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 using System.IO;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class Sequoiadb
      *  \brief Database operation interfaces of admin
@@ -93,7 +93,7 @@ namespace SequoiaDB
         /** \fn void Connect()
          *  \brief Connect to remote Sequoiadb database server
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Connect()
@@ -106,7 +106,7 @@ namespace SequoiaDB
          *  \username Sequoiadb connection user name
          *  \password Sequoiadb connection password
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Connect(string username, string password)
@@ -122,7 +122,7 @@ namespace SequoiaDB
          *  \password Sequoiadb connection password
          *  \options The options for connection
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Connect(string username, string password, ConfigOptions options)
@@ -265,7 +265,7 @@ namespace SequoiaDB
          *  \username Sequoiadb connection user name
          *  \password Sequoiadb connection password
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void CreateUser(string username, string password)
@@ -294,7 +294,7 @@ namespace SequoiaDB
          *  \username Sequoiadb connection user name
          *  \password Sequoiadb connection password
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void RemoveUser(string username, string password)
@@ -321,7 +321,7 @@ namespace SequoiaDB
         /** \fn void TransactionBegin()
          *  \brief Begin the database transaction
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void TransactionBegin()
@@ -341,7 +341,7 @@ namespace SequoiaDB
         /** \fn void TransactionCommit()
          *  \brief Commit the database transaction
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void TransactionCommit()
@@ -361,7 +361,7 @@ namespace SequoiaDB
         /** \fn void TransactionRollback()
          *  \brief Rollback the database transaction
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void TransactionRollback()
@@ -402,7 +402,7 @@ namespace SequoiaDB
          *  \brief Create the named collection space with default SDB_PAGESIZE_64K
          *  \param csName The collection space name
          *  \return The collection space handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public CollectionSpace CreateCollectionSpace(string csName) 
@@ -422,7 +422,7 @@ namespace SequoiaDB
          *        SDB_PAGESIZE_64K
          *        SDB_PAGESIZE_DEFAULT
          *  \return The collection space handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public CollectionSpace CreateCollectionSpace(string csName, int pageSize)
@@ -456,7 +456,7 @@ namespace SequoiaDB
          *      PageSize   : Assign the pagesize of the collection space
          *      Domain     : Assign which domain does current collection space belong to
          *  \return The collection space handle
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public CollectionSpace CreateCollectionSpace(string csName, BsonDocument options)
@@ -477,7 +477,7 @@ namespace SequoiaDB
         /** \fn void DropCollectionSpace(string csName)
          *  \brief Remove the named collection space
          *  \param csName The collection space name
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void DropCollectionSpace(string csName) 
@@ -493,7 +493,7 @@ namespace SequoiaDB
          *  \param csName The collection space name
          *  \return The CollecionSpace handle
          *  \note If collection space not exit, throw BaseException
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public CollectionSpace GetCollecitonSpace(string csName) 
@@ -508,7 +508,7 @@ namespace SequoiaDB
          *  \brief Verify the existence of collection space
          *  \param csName The collecion space name
          *  \return True if existed or False if not existed
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool IsCollectionSpaceExist(string csName)
@@ -530,7 +530,7 @@ namespace SequoiaDB
         /** \fn DBCursor ListCollectionSpaces()
          *  \brief List all the collecion space
          *  \return A DBCursor of all the collection space or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListCollectionSpaces()
@@ -541,7 +541,7 @@ namespace SequoiaDB
         /** \fn DBCursor ListCollections()
          *  \brief List all the collecion space
          *  \return A DBCursor of all the collection or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListCollections()
@@ -553,7 +553,7 @@ namespace SequoiaDB
          *  \brief Executing SQL command
          *  \param sql SQL command
          *  \return The DBCursor of matching documents or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor Exec(string sql)
@@ -587,7 +587,7 @@ namespace SequoiaDB
         /** \fn void ExecUpdate(string sql)
          *  \brief Executing SQL command for updating
          *  \param sql SQL command
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void ExecUpdate(string sql)
@@ -624,7 +624,7 @@ namespace SequoiaDB
          *  \param selector The selective rule or null
          *  \param orderBy The ordered rule or null
          *  \return A DBCursor of all the fitted objects or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetSnapshot(int snapType, BsonDocument matcher, BsonDocument selector,
@@ -712,7 +712,7 @@ namespace SequoiaDB
          *      SDB_LIST_CS_IN_DOMAIN
          *      SDB_LIST_CL_IN_DOMAIN
          *  \return A DBCursor of all the fitted objects or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetList(int listType)
@@ -744,7 +744,7 @@ namespace SequoiaDB
          *  \param selector The selective rule or null
          *  \param orderBy The ordered rule or null
          *  \return A DBCursor of all the fitted objects or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor GetList(int listType, BsonDocument matcher, BsonDocument selector,
@@ -833,7 +833,7 @@ namespace SequoiaDB
         /** \fn void ResetSnapshot( BsonDocument matcher )
          *  \brief Reset the snapshot
          *  \param matcher The matching condition 
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void ResetSnapshot( BsonDocument matcher )
@@ -854,7 +854,7 @@ namespace SequoiaDB
          *  \param options Contains a series of backup configuration infomations. 
          *         Backup the whole cluster if null. The "options" contains 5 options as below. 
          *         All the elements in options are optional. 
-         *         eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sequoiadb/backup", 
+         *         eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sqldb/backup", 
          *             "Name":"backupName", "Description":description, "EnsureInc":true, "OverWrite":true}
          *         <ul>
          *          <li>GroupName   : The replica groups which to be backuped
@@ -865,7 +865,7 @@ namespace SequoiaDB
          *          <li>OverWrite   : Whether overwrite the old backup file, default to be false
          *         </ul>
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void BackupOffline(BsonDocument options)
@@ -904,7 +904,7 @@ namespace SequoiaDB
          *  \brief List the backups.
          *  \param options Contains configuration infomations for remove backups, list all the backups in the default backup path if null.
          *         The "options" contains 3 options as below. All the elements in options are optional. 
-         *         eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sequoiadb/backup", "Name":"backupName"}
+         *         eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sqldb/backup", "Name":"backupName"}
          *         <ul>
          *          <li>GroupName   : Assign the backups of specifed replica groups to be list
          *          <li>Path        : Assign the backups in specifed path to be list, if not assign, use the backup path asigned in the configuration file
@@ -914,7 +914,7 @@ namespace SequoiaDB
          *  \param selector The selective rule, return the whole document if null
          *  \param orderBy The ordered rule, never sort if null
          *  \return the DBCursor of the backup or null while having no backup infonation
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListBackup(BsonDocument options, BsonDocument matcher,
@@ -956,14 +956,14 @@ namespace SequoiaDB
          *  \brief Remove the backups.
          *  \param options Contains configuration infomations for remove backups, remove all the backups in the default backup path if null.
          *                 The "options" contains 3 options as below. All the elements in options are optional.
-         *                 eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sequoiadb/backup", "Name":"backupName"}
+         *                 eg: {"GroupName":["rgName1", "rgName2"], "Path":"/opt/sqldb/backup", "Name":"backupName"}
          *                 <ul>
          *                  <li>GroupName   : Assign the backups of specifed replica grouops to be remove
          *                  <li>Path        : Assign the backups in specifed path to be remove, if not assign, use the backup path asigned in the configuration file
          *                  <li>Name        : Assign the backups with specifed name to be remove
          *                 </ul>
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void RemoveBackup(BsonDocument options)
@@ -1001,7 +1001,7 @@ namespace SequoiaDB
          *  \param selector The selective rule, return the whole document if null
          *  \param orderBy The ordered rule, never sort if null
          *  \param hint The hint, automatically match the optimal hint if null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListTasks(BsonDocument matcher, BsonDocument selector, BsonDocument orderBy, BsonDocument hint)
@@ -1025,7 +1025,7 @@ namespace SequoiaDB
         /** \fn void WaitTasks(List<long> taskIDs)
          *  \brief Wait the tasks to finish.
          *  \param taskIDs The list of task id
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void WaitTasks(List<long> taskIDs)
@@ -1056,7 +1056,7 @@ namespace SequoiaDB
         /** \fn void CancelTask(long taskIDs, bool isAsync)
          *  \brief Cancel the specified task.
          *  \param taskID The task id
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void CancelTask(long taskID, bool isAsync)
@@ -1090,7 +1090,7 @@ namespace SequoiaDB
          *                         eg:{"PreferedInstance":"m"/"M"/"s"/"S"/"a"/"A"/1-7},
          *                         prefer to choose "read and write instance"/"read only instance"/"anyone instance"/instance1-insatance7,
          *                         default to be {"PreferedInstance":"A"}, means would like to choose anyone instance to respond read request such as query. 
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void SetSessionAttr(BsonDocument options)
@@ -1142,7 +1142,7 @@ namespace SequoiaDB
          *         we can't use those cursors to get data from db engine again,
          *         but, there are some data cache in local
          *  \return void
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void CloseAllCursors()
@@ -1158,7 +1158,7 @@ namespace SequoiaDB
          *  \brief Verify the existence of domain in current database
          *  \param dmName The domain name
          *  \return True if collection existed or False if not existed
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool IsDomainExist(string dmName)
@@ -1193,7 +1193,7 @@ namespace SequoiaDB
          *                 However, it won't automatically split data into those groups which were add into this domain later.
          *                 eg: { "Groups": [ "group1", "group2", "group3" ], "AutoSplit: true" }
          *  \return The created Domain instance
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Domain CreateDomain(string domainName, BsonDocument options)
@@ -1231,7 +1231,7 @@ namespace SequoiaDB
          *  \brief Drop a domain.
          *  \param domainName The name of the domain
          *  \return The created Domain instance
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void DropDomain(string domainName)
@@ -1260,7 +1260,7 @@ namespace SequoiaDB
          *  \brief Get the specified domain.
          *  \param domainName The name of the domain
          *  \return The created Domain instance
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Domain GetDomain(string domainName)
@@ -1282,7 +1282,7 @@ namespace SequoiaDB
          *  \param selector The selective rule, return the whole document if null
          *  \param orderBy The ordered rule, never sort if null
          *  \return the cursor of the result.
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListDomains(BsonDocument matcher, BsonDocument selector,
@@ -1294,7 +1294,7 @@ namespace SequoiaDB
         /** \fn DBCursor ListReplicaGroups()
          *  \brief Get all the groups
          *  \return A cursor of all the groups
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListReplicaGroups()
@@ -1307,7 +1307,7 @@ namespace SequoiaDB
          *  \brief Get the ReplicaGroup by name
          *  \param groupName The group name
          *  \return The fitted ReplicaGroup or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public ReplicaGroup GetReplicaGroup(string groupName)
@@ -1344,7 +1344,7 @@ namespace SequoiaDB
          *  \brief Get the ReplicaGroup by ID
          *  \param groupID The group ID
          *  \return The fitted ReplicaGroup or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public ReplicaGroup GetReplicaGroup(int groupID)
@@ -1379,7 +1379,7 @@ namespace SequoiaDB
          *  \brief Create the ReplicaGroup with given name
          *  \param groupName The group name
          *  \return The ReplicaGroup has been created succefully
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public ReplicaGroup CreateReplicaGroup(string groupName)
@@ -1403,7 +1403,7 @@ namespace SequoiaDB
         /** \fn ReplicaGroup RemoveReplicaGroup(string groupName)
          *  \brief Remove the ReplicaGroup with given name
          *  \param groupName The group name
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          *  \note We can't remove a replica group which has data
          */
@@ -1429,7 +1429,7 @@ namespace SequoiaDB
          *  \param port The port
          *  \param dbpath The database path
          *  \param configure The configure options
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void CreateReplicaCataGroup(string hostName, int port, string dbpath,
@@ -1469,7 +1469,7 @@ namespace SequoiaDB
          *  \brief Activate the ReplicaGroup with given name
          *  \param groupName The group name
          *  \return The ReplicaGroup has been activated if succeed or null if fail
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public ReplicaGroup ActivateReplicaGroup(string groupName)

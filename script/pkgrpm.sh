@@ -56,15 +56,15 @@ sdb_path="$script_path/.."
 pkg_root_path="$sdb_path/package"
 pkg_tmp_path=$pkg_root_path/tmp
 pkg_output_path="$pkg_root_path/output"
-pkg_conf_file=$pkg_root_path/conf/rpm/sequoiadb.spec
+pkg_conf_file=$pkg_root_path/conf/rpm/sqldb.spec
 mkdir -p $pkg_tmp_path
 
 ver_name="SDB_ENGINE_VERISON_CURRENT"
 subver_name="SDB_ENGINE_SUBVERSION_CURRENT"
-ver_info_file=$sdb_path/SequoiaDB/engine/include/ossVer.h
+ver_info_file=$sdb_path/SqlDB/engine/include/ossVer.h
 begin_ver=`get_macro_val $ver_info_file $ver_name`
 sub_ver=`get_macro_val $ver_info_file $subver_name`
-sdb_name="sequoiadb-$begin_ver.$sub_ver"
+sdb_name="sqldb-$begin_ver.$sub_ver"
 
 echo "package the source files"
 pkg_src_path="$pkg_tmp_path/$sdb_name"
@@ -76,8 +76,8 @@ err_exit $?
 echo "prepare the spec file"
 mkdir -p $pkg_tmp_path/rpm/SPECS
 cp -f $pkg_conf_file $pkg_tmp_path/rpm/SPECS
-sed -i "s/SDB_ENGINE_VERISON_CURRENT/$begin_ver/g" $pkg_tmp_path/rpm/SPECS/sequoiadb.spec
-sed -i "s/SDB_ENGINE_SUBVERSION_CURRENT/$sub_ver/g" $pkg_tmp_path/rpm/SPECS/sequoiadb.spec
+sed -i "s/SDB_ENGINE_VERISON_CURRENT/$begin_ver/g" $pkg_tmp_path/rpm/SPECS/sqldb.spec
+sed -i "s/SDB_ENGINE_SUBVERSION_CURRENT/$sub_ver/g" $pkg_tmp_path/rpm/SPECS/sqldb.spec
 echo "build the RPM package"
 mkdir -p $pkg_tmp_path/rpm/SOURCES
 mkdir -p $pkg_tmp_path/rpm/BUILD
@@ -86,7 +86,7 @@ mkdir -p $pkg_tmp_path/rpm/RPMS
 mkdir -p $pkg_tmp_path/rpm/SRPMS
 rm -rf $pkg_tmp_path/rpm/SOURCES/*
 mv $pkg_tmp_path/$sdb_name.tar.gz $pkg_tmp_path/rpm/SOURCES
-rpmbuild --rmsource --define "_topdir $pkg_tmp_path/rpm" -bb $pkg_tmp_path/rpm/SPECS/sequoiadb.spec
+rpmbuild --rmsource --define "_topdir $pkg_tmp_path/rpm" -bb $pkg_tmp_path/rpm/SPECS/sqldb.spec
 if [[ $? -ne 0 ]]; then
    exit 1;
 fi

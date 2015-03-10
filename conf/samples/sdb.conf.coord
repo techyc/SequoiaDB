@@ -1,7 +1,7 @@
-# SequoiaDB configuration
+# SqlDB configuration
 
 # Database path
-dbpath=/opt/sequoiadb/database/coord
+dbpath=/opt/sqldb/database/coord
 
 # Index path
 # indexpath=

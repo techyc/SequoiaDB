@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     public class Logger
     {

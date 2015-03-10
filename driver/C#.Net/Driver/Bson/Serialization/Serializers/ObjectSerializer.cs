@@ -20,10 +20,10 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
 
-namespace SequoiaDB.Bson.Serialization.Serializers
+namespace SqlDB.Bson.Serialization.Serializers
 {
     /// <summary>
     /// Represents a serializer for objects.

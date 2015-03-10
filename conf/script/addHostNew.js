@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 @modify list:
    2014-7-26 Zhaobo Tan  Init
 @parameter
-   BUS_JSON: the format is: {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sequoiadb/packet/sequoiadb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.166","HostName":"rhel64-test9","User":"root","Passwd":"sequoiadb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sequoiadb"}}
+   BUS_JSON: the format is: {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sqldb/packet/sqldb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.166","HostName":"rhel64-test9","User":"root","Passwd":"sqldb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sqldb"}}
    SYS_JSON: task id, the format is: { "TaskID":1 } ;
    ENV_JSON: {}
    OTHER_JSON: {}
@@ -29,9 +29,9 @@
 */
 
 // println
-//var BUS_JSON = {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sequoiadb/packet/sequoiadb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.42","HostName":"susetzb","User":"root","Passwd":"sequoiadb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sequoiadb"} } ;
+//var BUS_JSON = {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sqldb/packet/sqldb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.42","HostName":"susetzb","User":"root","Passwd":"sqldb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sqldb"} } ;
 
-//var BUS_JSON = {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sequoiadb/packet/sequoiadb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.165","HostName":"rhel64-test8","User":"root","Passwd":"sequoiadb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sequoiadb"} } ;
+//var BUS_JSON = {"SdbUser":"sdbadmin","SdbPasswd":"sdbadmin","SdbUserGroup":"sdbadmin_group","InstallPacket":"/opt/sqldb/packet/sqldb-1.10-linux_x86_64-installer.run","HostInfo":{"IP":"192.168.20.165","HostName":"rhel64-test8","User":"root","Passwd":"sqldb","SshPort":"22","AgentService":"11790","InstallPath":"/opt/sqldb"} } ;
 
 // var SYS_JSON = { "TaskID":1 } ;
 
@@ -175,7 +175,7 @@ function _final()
 @author: Tanzhaobo
 @parameter
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
 @return
    packetname[string]: the name of the install packet
 ***************************************************************************** */
@@ -205,7 +205,7 @@ function _getInstallPacketName( packet )
 @author: Tanzhaobo
 @parameter
    install_packet[string]: the full name of the packet,
-      e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+      e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
 @return
    [string]: the md5 of local db install packet
 ***************************************************************************** */
@@ -363,7 +363,7 @@ function _needToInstall( ssh, install_packet, install_path )
    {
       // set execute command run by ./sdb
       /*
-      /tmp/omatmp/bin/sdb -e 'var install_path = "/opt/sequoiadb"' -f '/tmp/omatmp/conf/script/define.js, /tmp/omatmp/conf/script/error.js, /tmp/omatmp/conf/script/log.js, /tmp/omatmp/conf/script/common.js, /tmp/omatmp/conf/script/func.js, /tmp/omatmp/conf/script/addHostPreCheck.js'
+      /tmp/omatmp/bin/sdb -e 'var install_path = "/opt/sqldb"' -f '/tmp/omatmp/conf/script/define.js, /tmp/omatmp/conf/script/error.js, /tmp/omatmp/conf/script/log.js, /tmp/omatmp/conf/script/common.js, /tmp/omatmp/conf/script/func.js, /tmp/omatmp/conf/script/addHostPreCheck.js'
       */
       js_files = "/tmp/omatmp/conf/script/define.js" + ", " ;
       js_files += "/tmp/omatmp/conf/script/error.js" + ", " ;
@@ -477,7 +477,7 @@ println("3333333333333333333333333333333")
 @parameter
    ssh[object]: Ssh object
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
 @return void
 ***************************************************************************** */
 function _pushDBPacket( ssh, packet )
@@ -519,10 +519,10 @@ function _pushDBPacket( ssh, packet )
 @author: Tanzhaobo
 @parameter
    ssh[object]: Ssh object
-   sdbuser[string]: the user to be add for running sequoiadb program
+   sdbuser[string]: the user to be add for running sqldb program
    sdbpasswd[string]: the password of sdbuser
    packet[string]: the full name of the packet,
-                   e.g. /tmp/packet/sequoiadb-1.8-linux_x86_64-installer.run
+                   e.g. /tmp/packet/sqldb-1.8-linux_x86_64-installer.run
    path[string]: the path where the install packet is in local host, we need 
                  to push this packet to remote host
 @return void

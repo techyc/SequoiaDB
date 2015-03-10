@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
 @modify list:
    2014-7-26 Zhaobo Tan  Init
 @parameter
-   BUS_JSON: the format is: { "HostName": "rhel64-test8", "IP": "192.168.20.165", "User": "root", "Passwd": "sequoiadb", "InstallPath": "/opt/sequoiadb", "SshPort": "22" }
+   BUS_JSON: the format is: { "HostName": "rhel64-test8", "IP": "192.168.20.165", "User": "root", "Passwd": "sqldb", "InstallPath": "/opt/sqldb", "SshPort": "22" }
    SYS_JSON: {}
    ENV_JSON: {}
    OTHER_JSON: {}
@@ -32,12 +32,12 @@
 var RET_JSON       = new Object() ;
 var errMsg         = "" ;
 /* *****************************************************************************
-@discretion: uninstall sequoiadb packet and stop sdbcm in remote host
+@discretion: uninstall sqldb packet and stop sdbcm in remote host
 @author: Tanzhaobo
 @parameter
    ssh[object]: ssh object
    osInfo[string]: os type
-   path[string]: the path where the sequoiadb install in
+   path[string]: the path where the sqldb install in
 @return void
 ***************************************************************************** */
 function uninstallPacketInRemote( ssh, osInfo, path )
@@ -58,7 +58,7 @@ function uninstallPacketInRemote( ssh, osInfo, path )
    }
    catch ( e )
    {
-      errMsg = "Failed to uninstall sequoiadb packet" ;
+      errMsg = "Failed to uninstall sqldb packet" ;
       exception_handle( e, errMsg ) ;
    }
 }

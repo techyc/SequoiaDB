@@ -6,7 +6,7 @@ MD5_HEADER_PATH = $(MD5_PATH)/lib
 
 EXTERNAL_PATH = $(CURRENT_PATH)/external/client
 BSON_PATH = $(EXTERNAL_PATH)/sdbbson
-ENGINE_PATH = $(CURRENT_PATH)/../../SequoiaDB/engine
+ENGINE_PATH = $(CURRENT_PATH)/../../SqlDB/engine
 
 BSON_SOURCE = $(BSON_PATH)/numbers.c $(BSON_PATH)/bson.c $(BSON_PATH)/encoding.c
 

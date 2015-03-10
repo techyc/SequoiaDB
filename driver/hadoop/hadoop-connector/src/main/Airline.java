@@ -15,10 +15,10 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import com.sequoiadb.hadoop.io.BSONWritable;
-import com.sequoiadb.hadoop.mapreduce.SequoiadbInputFormat;
-import com.sequoiadb.hadoop.mapreduce.SequoiadbOutputFormat;
-import com.sequoiadb.hadoop.util.SequoiadbConfigUtil;
+import com.sqldb.hadoop.io.BSONWritable;
+import com.sqldb.hadoop.mapreduce.SequoiadbInputFormat;
+import com.sqldb.hadoop.mapreduce.SequoiadbOutputFormat;
+import com.sqldb.hadoop.util.SequoiadbConfigUtil;
 
 public class Airline {
 	private static Log log = LogFactory.getLog(Airline.class);
@@ -55,7 +55,7 @@ public class Airline {
 			options.addOption("H", "help", false,
 					"Print this usage information");
 			options.addOption("u", "urls", true,
-					"sequoiadb url list (default localhost:11810)");
+					"sqldb url list (default localhost:11810)");
 			options.addOption(null, "incs", true,
 					"The collection space name of input");
 			options.addOption(null, "incl", true,

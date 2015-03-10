@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     public class ServerAddress
     {

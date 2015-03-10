@@ -1,4 +1,4 @@
-#   Copyright (C) 2012-2014 SequoiaDB Ltd.
+#   Copyright (C) 2012-2014 SqlDB Ltd.
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import glob
 import shutil
 
 if 'win32' == sys.platform:
-   dlls = './pysequoiadb/*.dll'
+   dlls = './pysqldb/*.dll'
    for file in glob.glob(dlls):
       if file.startswith('lib'):
          newname = file[3:]
@@ -30,9 +30,9 @@ else:
    modules = ['err.prop', '*.so']
 
 extra_opts = {}
-extra_opts['packages'] = [ 'bson', 'pysequoiadb']
-extra_opts['package_dir']={ 'pysequoiadb':'pysequoiadb', 'bson':'bson'}
-extra_opts['package_data'] = { 'pysequoiadb':modules,
+extra_opts['packages'] = [ 'bson', 'pysqldb']
+extra_opts['package_dir']={ 'pysqldb':'pysqldb', 'bson':'bson'}
+extra_opts['package_data'] = { 'pysqldb':modules,
                                'bson':[ 'buffer.h',
                                         'buffer.c',
                                         '_cbsonmodule.h',
@@ -44,15 +44,15 @@ extra_opts['package_data'] = { 'pysequoiadb':modules,
                                         'time64_config.h',
                                         'time64_limits.h', ],}
 #extra_opts['ext_modules'] = ext_modules
-setup(name = 'pysequoiadb',
+setup(name = 'pysqldb',
       version = '1.0',
-      author = 'SequoiaDB Inc.',
+      author = 'SqlDB Inc.',
       license = 'GNU Affero GPL',
-      description = 'This is a sequoiadb python driver use adapter package',
-      url = 'http://www.sequoiadb.com',
+      description = 'This is a sqldb python driver use adapter package',
+      url = 'http://www.sqldb.com',
       **extra_opts)
 
 if 'win32' == sys.platform:
-   pyds = './pysequoiadb/*.pyd'
+   pyds = './pysqldb/*.pyd'
    for file in glob.glob(pyds):
       os.remove(file)

@@ -1,44 +1,44 @@
-SequoiaDB README
+SqlDB README
 =================
 
-Welcome to SequoiaDB!
+Welcome to SqlDB!
 
-SequoiaDB is a distributed document-oriented NoSQL Database.
+SqlDB is a distributed document-oriented NoSQL Database.
 
 Engine:
 -----------------
-	sequoiadb       -- SequoiaDB Engine
-	sdbstart        -- SequoiaDB Engine start
-	sdbstop         -- SequoiaDB Engine stop
-	sdblist         -- SequoiaDB Engine list
-	sdbfmp          -- SequoiaDB fenced mode process
+	sqldb       -- SqlDB Engine
+	sdbstart        -- SqlDB Engine start
+	sdbstop         -- SqlDB Engine stop
+	sdblist         -- SqlDB Engine list
+	sdbfmp          -- SqlDB fenced mode process
 
 
 Shell:
 -----------------
-	sdb             -- SequoiaDB client
-	sdbbp           -- SequoiaDB client backend process
+	sdb             -- SqlDB client
+	sdbbp           -- SqlDB client backend process
 
 
 Cluster Manager:
 -----------------
-	sdbcm           -- SequoiaDB cluster manager
-	sdbcmart        -- SequoiaDB cluster manager start
-	sdbcmtop        -- SequoiaDB cluster manager stop
-	sdbcmd          -- SequoiaDB cluster manager daemon
+	sdbcm           -- SqlDB cluster manager
+	sdbcmart        -- SqlDB cluster manager start
+	sdbcmtop        -- SqlDB cluster manager stop
+	sdbcmd          -- SqlDB cluster manager daemon
 
 
 Tools:
 -----------------
-	sdbdpsdump      -- SequoiaDB log dump
-	sdbexprt        -- SequoiaDB export
-	sdbimprt        -- SequoiaDB import
-	sdbinspt        -- SequoiaDB data inspection
-	sdbrestore      -- SequoiaDB restore
-	sdbtop          -- SequoiaDB TOP
-	sdbperfcol      -- SequoiaDB performance collection
-	sdbwsart        -- SequoiaDB web service start
-	sdbwstop        -- SequoiaDB web service stop
+	sdbdpsdump      -- SqlDB log dump
+	sdbexprt        -- SqlDB export
+	sdbimprt        -- SqlDB import
+	sdbinspt        -- SqlDB data inspection
+	sdbrestore      -- SqlDB restore
+	sdbtop          -- SqlDB TOP
+	sdbperfcol      -- SqlDB performance collection
+	sdbwsart        -- SqlDB web service start
+	sdbwstop        -- SqlDB web service stop
 
 
 Drivers:
@@ -52,13 +52,13 @@ Drivers:
 	PHP Driver:
 		libsdbphp-x.x.x.so
 	JAVA Driver:
-		sequoiadb.jar
+		sqldb.jar
 	PYTHON Driver:
 		lib.linux-x86_64-2.6
 	.NET Driver:
-		sequoiadb.dll
+		sqldb.dll
 	Python Driver:
-		pysequoiadb.tar.gz
+		pysqldb.tar.gz
 
 
 Connectors:
@@ -66,9 +66,9 @@ Connectors:
 	Hadoop Connector:
 		hadoop-connector.jar
 	Hive Connector:
-		hive-sequoiadb-apache.jar
+		hive-sqldb-apache.jar
 	Storm Connector:
-		storm-sequoiadb.jar
+		storm-sqldb.jar
 
 
 Building Prerequisites:
@@ -183,9 +183,9 @@ Package RPM:
 
 Running:
 -----------------
-	For command line options to start SequoiaDB, invoke:
+	For command line options to start SqlDB, invoke:
 		$ ./sdbstart --help
-	For command line options to stop SequoiaDB, invoke:
+	For command line options to stop SqlDB, invoke:
 		$ ./sdbstop --help
 	For command line options to start cluster manager, invoke:
 		$ ./sdbcmart --help
@@ -194,33 +194,33 @@ Running:
 
 
 	To run in standalone mode:
-		$ mkdir /sequoiadb/data
-		$ cd /sequoiadb/data
-		$ /opt/sequoiadb/bin/sdbstart -p 11810 --force
-		$ # sequoiadb start successful
-		$ # start sequoiadb shell
-		$ /opt/sequoiadb/bin/sdb
+		$ mkdir /sqldb/data
+		$ cd /sqldb/data
+		$ /opt/sqldb/bin/sdbstart -p 11810 --force
+		$ # sqldb start successful
+		$ # start sqldb shell
+		$ /opt/sqldb/bin/sdb
 		> var db = new Sdb() ;
 		> db.help() ;
 
 
-	To run in cluster mode, please refer SequoiaDB Information Center.
+	To run in cluster mode, please refer SqlDB Information Center.
 
 
 Documentation:
 -----------------
-[SequoiaDB Home Page](http://www.sequoiadb.com/)
+[SqlDB Home Page](http://www.sqldb.com/)
 
 
 Restrictions:
 -----------------
-	- SequoiaDB officially supports x86_64 and ppc64 Linux build on CentOS, Redhat, SUSE and Ubuntu.
+	- SqlDB officially supports x86_64 and ppc64 Linux build on CentOS, Redhat, SUSE and Ubuntu.
 	- Windows build and 32 bit build are for testing purpose only.
 
 
 License:
 -----------------
-	Most SequoiaDB source files are made available under the terms of the
+	Most SqlDB source files are made available under the terms of the
 	GNU Affero General Public License (AGPL). See individual files for details.
 	All source files for clients, drivers and connectors are released
 	under Apache License v2.0.

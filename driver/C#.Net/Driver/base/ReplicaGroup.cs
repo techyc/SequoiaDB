@@ -1,12 +1,12 @@
 ﻿using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 using System.Collections.Generic;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class ReplicaGroup
      *  \brief Database operation interfaces of replica group.
@@ -27,11 +27,11 @@ namespace SequoiaDB
             isBigEndian = sdb.isBigEndian;
         }
 
-        /** \property SequoiaDB
-         *  \brief Return the sequoiadb handle of current group 
+        /** \property SqlDB
+         *  \brief Return the sqldb handle of current group 
          *  \return The Sequoiadb object
          */
-        public Sequoiadb SequoiaDB
+        public Sequoiadb SqlDB
         {
             get { return sdb; }
         }
@@ -66,7 +66,7 @@ namespace SequoiaDB
         /** \fn bool Stop()
          *  \brief Stop the current node
          *  \return True if succeed or False if fail
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool Stop()
@@ -78,7 +78,7 @@ namespace SequoiaDB
         /** \fn bool Start()
          *  \brief Start the current node
          *  \return True if succeed or False if fail
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public bool Start()
@@ -96,7 +96,7 @@ namespace SequoiaDB
          *      SDB_NODE_INACTIVE
          *      SDB_NODE_UNKNOWN
          *  \return The count of node
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public int GetNodeNum( SDBConst.NodeStatus status)
@@ -132,7 +132,7 @@ namespace SequoiaDB
         /** \fn BsonDocument GetDetail()
          *  \brief Get the detail information of current group
          *  \return The detail information in BsonDocument object
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public BsonDocument GetDetail()
@@ -162,7 +162,7 @@ namespace SequoiaDB
          *  \param dbpath The database path of node
          *  \param map The other configure information of node
          *  \return The Node object
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Node CreateNode(string hostName, int port, string dbpath,
@@ -200,7 +200,7 @@ namespace SequoiaDB
          *  \param hostName The host name of node
          *  \param port The port of node
          *  \param configure The configurations for the replica node
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void RemoveNode(string hostName, int port,
@@ -237,7 +237,7 @@ namespace SequoiaDB
         /** \fn Node GetMaster()
          *  \brief Get the master node of current group
          *  \return The fitted node or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Node GetMaster()
@@ -277,7 +277,7 @@ namespace SequoiaDB
         /** \fn Node GetSlave()
          *  \brief Get the slave node of current group
          *  \return The fitted node or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Node GetSlave()
@@ -327,7 +327,7 @@ namespace SequoiaDB
          *  \brief Get the node by node name
          *  \param nodeName The node name
          *  \return The fitted node or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Node GetNode(string nodeName)
@@ -352,7 +352,7 @@ namespace SequoiaDB
          *  \param hostName The host name
          *  \param port The port
          *  \return The fitted node or null
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public Node GetNode(string hostName, int port)

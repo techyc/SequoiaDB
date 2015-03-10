@@ -1,7 +1,7 @@
-﻿using SequoiaDB;
+﻿using SqlDB;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
 namespace DriverTest
 {

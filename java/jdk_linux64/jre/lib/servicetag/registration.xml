@@ -19,7 +19,7 @@
          <product_urn>urn:uuid:b58ef9a8-5ae8-11db-a023-080020a9ed93</product_urn>
          <product_parent_urn>urn:uuid:fdc90b21-018d-4cab-b866-612c7c119ed3</product_parent_urn>
          <product_parent>Java Platform Standard Edition 6 (Java SE 6)</product_parent>
-         <product_defined_inst_id>id=1.6.0_43-b01 amd64,dir=/home/sequoiadb/jdk1.6.0_43/jre</product_defined_inst_id>
+         <product_defined_inst_id>id=1.6.0_43-b01 amd64,dir=/home/sqldb/jdk1.6.0_43/jre</product_defined_inst_id>
          <product_vendor>Sun Microsystems</product_vendor>
          <platform_arch>amd64</platform_arch>
          <timestamp>2013-03-14 02:42:24 GMT</timestamp>

@@ -20,7 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// Represents a BSON double value.

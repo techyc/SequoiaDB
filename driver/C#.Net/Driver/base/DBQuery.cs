@@ -1,10 +1,10 @@
-﻿using SequoiaDB.Bson;
+﻿using SqlDB.Bson;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class DBQuery
      *  \brief Database operation rules

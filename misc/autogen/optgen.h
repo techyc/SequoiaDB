@@ -9,8 +9,8 @@
 
 #define OPTXMLSRC "optlist.xml"
 #define HEADERNAME "pmdOptions"
-#define HEADERPATHCPP "../../SequoiaDB/engine/include/"HEADERNAME".hpp"
-#define HEADERPATHC "../../SequoiaDB/engine/include/"HEADERNAME".h"
+#define HEADERPATHCPP "../../SqlDB/engine/include/"HEADERNAME".hpp"
+#define HEADERPATHC "../../SqlDB/engine/include/"HEADERNAME".h"
 #define COORDSAMPLEPATH "../../conf/samples/sdb.conf.coord"
 #define CATALOGSAMPLEPATH "../../conf/samples/sdb.conf.catalog"
 #define DATASAMPLEPATH "../../conf/samples/sdb.conf.data"

@@ -1,7 +1,7 @@
-﻿using SequoiaDB;
+﻿using SqlDB;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 using System.Collections.Generic;
 
 namespace DriverTest
@@ -13,7 +13,7 @@ namespace DriverTest
         private static Config config = null;
         private static Sequoiadb sdb = null;
         private ReplicaGroup group = null;
-        private SequoiaDB.Node node = null;
+        private SqlDB.Node node = null;
 
         private string groupName = null;
         private string hostName = null;
@@ -71,7 +71,7 @@ namespace DriverTest
                 int nodeNum = group.GetNodeNum(SDBConst.NodeStatus.SDB_NODE_ALL);
                 if (nodeNum > 0)
                 {
-                    SequoiaDB.Node nd = group.GetMaster();
+                    SqlDB.Node nd = group.GetMaster();
                     Sequoiadb db = new Sequoiadb(nd.HostName, nd.Port);
                     Assert.IsTrue(nd.Start());
                     db.Connect(config.conf.UserName, config.conf.Password);
@@ -123,7 +123,7 @@ namespace DriverTest
                 int nodeNum = group.GetNodeNum(SDBConst.NodeStatus.SDB_NODE_ALL);
                 if (nodeNum > 0)
                 {
-                    SequoiaDB.Node nd = group.GetMaster();
+                    SqlDB.Node nd = group.GetMaster();
                     Sequoiadb db = new Sequoiadb(nd.HostName, nd.Port);
                     Assert.IsTrue(nd.Start());
                     db.Connect(config.conf.UserName, config.conf.Password);
@@ -185,9 +185,9 @@ namespace DriverTest
             BsonDocument detail = group.GetDetail();
             string gn = detail["GroupName"].AsString;
             Assert.IsTrue(groupName.Equals(gn));
-            SequoiaDB.Node master = group.GetMaster();
+            SqlDB.Node master = group.GetMaster();
             Assert.IsNotNull(master);
-            SequoiaDB.Node slave = group.GetSlave();
+            SqlDB.Node slave = group.GetSlave();
             Assert.IsNotNull(slave);
             Assert.IsTrue(node.Stop());
             Assert.IsTrue(node.Start());
@@ -221,7 +221,7 @@ namespace DriverTest
             string dbPath1 = config.conf.Groups[1].Nodes[1].DBPath;
             Dictionary<string, string> map1 = new Dictionary<string, string>();
             map1.Add("diaglevel", config.conf.Groups[1].Nodes[1].DiagLevel);
-            SequoiaDB.Node node1 = group.CreateNode(hostName1, port1, dbPath1, map1);
+            SqlDB.Node node1 = group.CreateNode(hostName1, port1, dbPath1, map1);
             Assert.IsNotNull(node1);
             // start node1
             Assert.IsTrue(node1.Start());

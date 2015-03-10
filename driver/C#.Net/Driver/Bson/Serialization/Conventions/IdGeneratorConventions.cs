@@ -19,9 +19,9 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-using SequoiaDB.Bson.Serialization;
+using SqlDB.Bson.Serialization;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents an Id generator convention.

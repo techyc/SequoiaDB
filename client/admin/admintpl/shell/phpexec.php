@@ -16,7 +16,7 @@ if ( $common == "checkfile" )
 	//判断安装文件是否存在
 	$common = ' "1"' ;
 	$order  = ' '.$order  ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -41,7 +41,7 @@ else if ( $common == "checkhost" )
 	$order  = ' '.$order  ;
 	$str_host = "" ;
 	$str_ip = "" ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -71,7 +71,7 @@ else if ( $common == "checkhost" )
 	{
 		if ( $str_ip != "" )
 		{
-			exec( './sequoiadbphp.sh 3 '.$str_ip, $output ) ;
+			exec( './sqldbphp.sh 3 '.$str_ip, $output ) ;
 			$arr_len = count($output) ;
 			if ( $arr_len > 0 )
 			{
@@ -80,7 +80,7 @@ else if ( $common == "checkhost" )
 		}
 		else
 		{
-			exec( './sequoiadbphp.sh 4 '.$str_host, $output ) ;
+			exec( './sqldbphp.sh 4 '.$str_host, $output ) ;
 			$arr_len = count($output) ;
 			if ( $arr_len > 0 )
 			{
@@ -95,12 +95,12 @@ else if ( $common == "checkhost" )
 }
 else if ( $common == "postallnodeconf" )
 {
-	if ( file_exists ( './sequoiadbconfig.sh' ) )
+	if ( file_exists ( './sqldbconfig.sh' ) )
 	{
-		copy( './sequoiadbconfig.sh', './sequoiadbconfig.sh.bak' ) ;
+		copy( './sqldbconfig.sh', './sqldbconfig.sh.bak' ) ;
 	}
 	
-	$file = fopen( './sequoiadbconfig.sh', 'w' ) ;
+	$file = fopen( './sqldbconfig.sh', 'w' ) ;
 	
 	$setup_conf = json_decode( $order, true ) ;
 	
@@ -375,7 +375,7 @@ else if ( $common == "checkenvhost" )
 	$line = empty( $_POST['line'] ) ? 0 : $_POST['line'] ;
 	$common = ' 5' ;
 	$order  = ' '.$order  ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -399,7 +399,7 @@ else if ( $common == "sendinstallfile" )
 	$line = empty( $_POST['line'] ) ? 0 : $_POST['line'] ;
 	$common = ' 6' ;
 	$order  = ' '.$order  ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -423,7 +423,7 @@ else if ( $common == "installthefile" )
 	$line = empty( $_POST['line'] ) ? 0 : $_POST['line'] ;
 	$common = ' 7' ;
 	$order  = ' '.$order  ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -447,7 +447,7 @@ else if ( $common == "createnode" )
 	$line = empty( $_POST['line'] ) ? 0 : $_POST['line'] ;
 	$common = ' 8' ;
 	$order  = ' '.$order  ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;
@@ -467,11 +467,11 @@ else if ( $common == "createnode" )
 else if ( $common == "activegroup" )
 {
 	//激活分区组
-	//$order = '/opt/sequoiadb/bin/sdb ubuntu-test-01 50000 g1' ;
+	//$order = '/opt/sqldb/bin/sdb ubuntu-test-01 50000 g1' ;
 	$line = empty( $_POST['line'] ) ? 0 : $_POST['line'] ;
 	$common = ' 9' ;
 	$order  = ' '.$order ;
-	exec( './sequoiadbphp.sh'.$common.$order, $output, $return ) ;
+	exec( './sqldbphp.sh'.$common.$order, $output, $return ) ;
 
 	$str = "" ;
 	$arr_len = count($output) ;

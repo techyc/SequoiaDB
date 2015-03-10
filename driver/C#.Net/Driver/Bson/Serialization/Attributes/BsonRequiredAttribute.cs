@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SequoiaDB.Bson.Serialization.Attributes
+namespace SqlDB.Bson.Serialization.Attributes
 {
     /// <summary>
     /// Indicates that a field or property is required.

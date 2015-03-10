@@ -1,8 +1,8 @@
-﻿/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+﻿/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Hetiu Lin
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class ConfigOptions
      *  \brief Database Connection Configuration Option

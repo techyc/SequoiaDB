@@ -15,10 +15,10 @@
 
 using System;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Attributes;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Attributes;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// A marker interface that represents serialization options.

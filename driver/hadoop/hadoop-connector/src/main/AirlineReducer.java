@@ -13,7 +13,7 @@ import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
 import org.bson.types.BasicBSONList;
 
-import com.sequoiadb.hadoop.io.BSONWritable;
+import com.sqldb.hadoop.io.BSONWritable;
 
 public class AirlineReducer extends
 		Reducer<Text, BSONWritable, Text, BSONWritable> {

@@ -19,9 +19,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-using SequoiaDB.Bson.Serialization.Options;
+using SqlDB.Bson.Serialization.Options;
 
-namespace SequoiaDB.Bson.Serialization.Conventions
+namespace SqlDB.Bson.Serialization.Conventions
 {
     /// <summary>
     /// Represents a BSON serialization options convention.

@@ -16,10 +16,10 @@
 using System;
 using System.Collections.Generic;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization.Serializers;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization.Serializers;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents a serializer for TClass (a subclass of BsonDocumentBackedClass).

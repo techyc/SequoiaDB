@@ -9,7 +9,7 @@
 #include <sstream>
 
 #define FILENAMEPATH "../filenames.lst"
-#define SOURCEPATH "../../SequoiaDB/engine/"
+#define SOURCEPATH "../../SqlDB/engine/"
 #define SKIPPATH ".svn"
 class FileNameGen
 {

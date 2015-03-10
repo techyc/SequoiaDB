@@ -3,7 +3,7 @@ BashPath=$(dirname $(readlink -f $0))
 . $BashPath/sdbsupportinit.sh
 . $BashPath/sdbsupportfunc1.sh
 . $BashPath/sdbsupportfunc2.sh
-. /etc/default/sequoiadb
+. /etc/default/sqldb
 
 echo ""
 echo "************************************Sdbsupport***************************"
@@ -50,17 +50,17 @@ sdbEchoLog "EVENT" "$0" "${LINENO}" "Step 0: passed comman:$0 $ParaPass"
 sdbEchoLog "EVENT" "$0" "${LINENO}" "Step 1: Success to check over environment"
 
 #******************************************************************************
-#@ Step 2 : get install path from /etc/default/sequoiadb file and check path
+#@ Step 2 : get install path from /etc/default/sqldb file and check path
 #@ Description :
 #   NAME=sdbcm
 #   SDBADMIN_USER=sdbadmin
-#   INSTALL_DIR=/opt/sequoiadb
+#   INSTALL_DIR=/opt/sqldb
 #******************************************************************************
 # get install path
 installpath=$INSTALL_DIR
 if [ "" == $installpath ] ; then
-   echo "don't have file /etc/default/sequoiadb, make sure your host is
-         installed sequoiadb or not"
+   echo "don't have file /etc/default/sqldb, make sure your host is
+         installed sqldb or not"
    echo ""
    exit -1
 fi

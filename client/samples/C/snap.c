@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Name: snap.c
- * Description: This program demostrates how to connect to SequoiaDB database,
+ * Description: This program demostrates how to connect to SqlDB database,
  *              and get database snapshot ( for other types of snapshots/lists,
  *              the steps are very similar )
  * Parameters:

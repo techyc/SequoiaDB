@@ -2225,7 +2225,7 @@ static Datum sdbColumnValue( sdbbson_iterator *sdbbsonIterator, Oid columnTypeId
    return columnValue ;
 }
 
-/* sdbFreeScanState closes the cursor, connection and collection to SequoiaDB
+/* sdbFreeScanState closes the cursor, connection and collection to SqlDB
  */
 void sdbFreeScanState( SdbExecState *executionState, bool deleteShared )
 {
@@ -2703,7 +2703,7 @@ static void SdbBeginForeignScan( ForeignScanState *scanState,
       ereport( ERROR, ( errcode ( ERRCODE_FDW_ERROR ),
             errmsg( "query collection failed:cs=%s,cl=%s,rc=%d", 
                fdw_state->sdbcs, fdw_state->sdbcl, rc ),
-            errhint( "Make sure collection exists on remote SequoiaDB database" ) ) ) ;
+            errhint( "Make sure collection exists on remote SqlDB database" ) ) ) ;
       
       sdbbson_dispose( &fdw_state->queryDocument ) ;
       return ;
@@ -2712,7 +2712,7 @@ static void SdbBeginForeignScan( ForeignScanState *scanState,
    scanState->fdw_state = ( void* )fdw_state ;
 }
 
-/* SdbIterateForeignScan reads the next record from SequoiaDB and converts into
+/* SdbIterateForeignScan reads the next record from SqlDB and converts into
  * PostgreSQL tuple
  */
 static TupleTableSlot * SdbIterateForeignScan( ForeignScanState *scanState )
@@ -2750,7 +2750,7 @@ static TupleTableSlot * SdbIterateForeignScan( ForeignScanState *scanState )
                             errmsg( "unable to fetch next record"
                                      ", rc = %d", rc ),
                             errhint( "Make sure collection exists on remote "
-                                      "SequoiaDB database, and the server "
+                                      "SqlDB database, and the server "
                                       "is still up and running" ) ) ) ;
          goto error ;
       }
@@ -2789,7 +2789,7 @@ static void SdbRescanForeignScan( ForeignScanState *scanState )
                          errmsg( "unable to rescan collection"
                                   ", rc = %d", rc ),
                          errhint( "Make sure collection exists on remote "
-                                   "SequoiaDB database" ) ) ) ;
+                                   "SqlDB database" ) ) ) ;
       goto error ;
    }
 done :
@@ -2935,7 +2935,7 @@ static INT32 sdbAcquireSampleRows( Relation relation, INT32 errorLevel,
                                errmsg( "unable to fetch next record"
                                         ", rc = %d", rc ),
                                errhint( "Make sure collection exists on remote"
-                                         " SequoiaDB database, and the server "
+                                         " SqlDB database, and the server "
                                          "is still up and running" ) ) ) ;
             goto error ;
          }

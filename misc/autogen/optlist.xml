@@ -47,10 +47,10 @@
          <en>Database path</en>
          <cn>数据库路径</cn>
       </description>
-      <catalogdft>/opt/sequoiadb/database/cata</catalogdft>
-      <coorddft>/opt/sequoiadb/database/coord</coorddft>
-      <datadft>/opt/sequoiadb/database/data</datadft>
-      <standdft>/opt/sequoiadb/database/standalone</standdft>
+      <catalogdft>/opt/sqldb/database/cata</catalogdft>
+      <coorddft>/opt/sqldb/database/coord</coorddft>
+      <datadft>/opt/sqldb/database/data</datadft>
+      <standdft>/opt/sqldb/database/standalone</standdft>
       <detail>
          <en>1. It specifies the path of data file.<fig></fig>
              2. If it is not specified, the default path is current path.</en>
@@ -334,7 +334,7 @@
       <detail>
          <en>1. It specifies the print level of diagnostic log. Diagnostic log in sequoiaDB, 0-5 respectively represent: SEVERE, ERROR, EVENT,WARNING, INFO, DEBUG.<fig></fig>
              2. If it is not specified, the default value is "WARNING".</en>
-         <cn>1.指定诊断日志打印级别。SequoiaDB中诊断日志从0-5分别代表：SEVERE, ERROR, EVENT, WARNING, INFO, DEBUG。<fig></fig>
+         <cn>1.指定诊断日志打印级别。SqlDB中诊断日志从0-5分别代表：SEVERE, ERROR, EVENT, WARNING, INFO, DEBUG。<fig></fig>
              2.如果不指定，则默认为WARNING。</cn>
       </detail>
       <typeofweb>num</typeofweb>
@@ -356,7 +356,7 @@
       <detail>
          <en>1. It specifies serving role. In sequoiaDB, "data/coord/catalog/standalone" represents "data node/coord node/catalog node/stand-alone machine".<fig></fig>
              2. If it is not specified, the default value is "standalone".</en>
-         <cn>1.指定服务角色。SequoiaDB分别以data/coord/catalog/standalone代表：数据节点/协调节点/编目节点/单机。<fig></fig>
+         <cn>1.指定服务角色。SqlDB分别以data/coord/catalog/standalone代表：数据节点/协调节点/编目节点/单机。<fig></fig>
              2.如果不指定则默认为单机。</cn>
       </detail>
       <typeofweb>str</typeofweb>

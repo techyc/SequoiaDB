@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.IO;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     class SDBMessageHelper
     {

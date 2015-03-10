@@ -1,7 +1,7 @@
 【sdbsupport工具说明】
 
 
-    功能：sdbsupport工具用于收集SequoiaDB数据库的日志信息,配置信息，数据库集群所在环境的硬件信息以及操作系统信息。当SequoiaDB在运行的时候，还能够获取snapshot快照的信息。
+    功能：sdbsupport工具用于收集SqlDB数据库的日志信息,配置信息，数据库集群所在环境的硬件信息以及操作系统信息。当SqlDB在运行的时候，还能够获取snapshot快照的信息。
 
 
 一、注意事项

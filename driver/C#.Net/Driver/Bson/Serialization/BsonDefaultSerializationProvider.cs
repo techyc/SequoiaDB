@@ -23,9 +23,9 @@ using System.Globalization;
 using System.Linq;
 using System.Net;
 
-using SequoiaDB.Bson.Serialization.Serializers;
+using SqlDB.Bson.Serialization.Serializers;
 
-namespace SequoiaDB.Bson.Serialization
+namespace SqlDB.Bson.Serialization
 {
     /// <summary>
     /// Represents the default serialization provider.

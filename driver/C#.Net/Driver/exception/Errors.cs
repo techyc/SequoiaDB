@@ -1,4 +1,4 @@
-namespace SequoiaDB
+namespace SqlDB
 {
     class Errors
     {

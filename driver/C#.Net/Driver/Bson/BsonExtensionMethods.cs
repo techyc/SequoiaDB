@@ -19,10 +19,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-using SequoiaDB.Bson.IO;
-using SequoiaDB.Bson.Serialization;
+using SqlDB.Bson.IO;
+using SqlDB.Bson.Serialization;
 
-namespace SequoiaDB.Bson
+namespace SqlDB.Bson
 {
     /// <summary>
     /// A static class containing BSON extension methods.

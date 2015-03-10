@@ -8,8 +8,8 @@
     <ProjectGuid>{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SequoiaDB.Bson</RootNamespace>
-    <AssemblyName>SequoiaDB.Bson</AssemblyName>
+    <RootNamespace>SqlDB.Bson</RootNamespace>
+    <AssemblyName>SqlDB.Bson</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -42,7 +42,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>..\CodeAnalysisRuleSet.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>bin\Debug\SequoiaDB.Bson.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\SqlDB.Bson.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,7 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>bin\Release\SequoiaDB.Bson.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\SqlDB.Bson.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>

@@ -28,8 +28,8 @@
    </sthead>
    <note>
       <first>
-         <en>SequoiaDB supports setting configuration with command line,configuration file, or both of them. When both of them are used, parameters in command line will overwrite those in configuration file.</en>
-         <cn>SequoiaDB支持命令行方式及配置文件方式。当两种方式并存时，命令行参数将会覆盖配置文件中的相同的配置项。</cn>
+         <en>SqlDB supports setting configuration with command line,configuration file, or both of them. When both of them are used, parameters in command line will overwrite those in configuration file.</en>
+         <cn>SqlDB支持命令行方式及配置文件方式。当两种方式并存时，命令行参数将会覆盖配置文件中的相同的配置项。</cn>
       </first>
       <second>
          <en>The total size of synch log (logfilesz * logfilenum)determines the fault tolerance in the process of sync. If log is bigger, the possiblity of full sync is lower.</en>

@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-   Copyright (C) 2012-2014 SequoiaDB Ltd.
+   Copyright (C) 2012-2014 SqlDB Ltd.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -169,7 +169,7 @@ var OMA_FILE_FUNC                    = "func.js" ;
 var OMA_FILE_CHECK_HOST_ITEM         = "checkHostItem.js" ;
 var OMA_FILE_CHECK_HOST              = "checkHost.js" ;
 var OMA_FILE_ADD_HOST_PRE_CHECK      = "addHostPreCheck.js" ;
-var OMA_FILE_INSTALL_INFO            = "/etc/default/sequoiadb" ;
+var OMA_FILE_INSTALL_INFO            = "/etc/default/sqldb" ;
 
 
 

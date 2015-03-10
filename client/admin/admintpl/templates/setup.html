@@ -87,7 +87,7 @@
                <b>全局参数</b>
             </div>
             <div class="right_box_hint_box">
-               <b>配置全局参数前，请把SequoiaDB安装文件放到PHP服务端中。</b>
+               <b>配置全局参数前，请把SqlDB安装文件放到PHP服务端中。</b>
             </div>
             <div class="right_box_context_box">
                <div class="right_box_context_box_setup_1">
@@ -97,8 +97,8 @@
                </div>
                <div class="right_box_context_box_setup_1">
                   <div class="right_box_context_box_setup_1_title">安装程序路径</div>
-                  <div class="right_box_context_box_setup_1_input"><input type="text" id="step_1_path" class="form-control" placeholder="例如：/home/sequoiadb.run" value=""></div>
-                  <div class="right_box_context_box_setup_1_describe">SequoiaDB安装程序路径(绝对路径)</div>
+                  <div class="right_box_context_box_setup_1_input"><input type="text" id="step_1_path" class="form-control" placeholder="例如：/home/sqldb.run" value=""></div>
+                  <div class="right_box_context_box_setup_1_describe">SqlDB安装程序路径(绝对路径)</div>
                </div>
                <div class="right_box_context_box_setup_1">
                   <div class="right_box_context_box_setup_1_title">sdbcm端口</div>
@@ -113,7 +113,7 @@
                         <option value="false">false</option>
                      </select>
                   </div>
-                  <div class="right_box_context_box_setup_1_describe">是否允许SequoiaDB相关进程开机自启动</div>
+                  <div class="right_box_context_box_setup_1_describe">是否允许SqlDB相关进程开机自启动</div>
                </div>
             </div>
          </div>
@@ -450,8 +450,8 @@
             <div class="right_box_context_box">
             	<div class="right_box_context_box_navigation_box">
                   <ul id="step_8_tab_ul" class="nav nav-tabs">
-                     <li class="active"><a href="#step_8_send" onclick="">分发SequoiaDB安装包</a></li>
-                     <li><a href="#step_8_install" onclick="">安装SequoiaDB</a></li>
+                     <li class="active"><a href="#step_8_send" onclick="">分发SqlDB安装包</a></li>
+                     <li><a href="#step_8_install" onclick="">安装SqlDB</a></li>
                      <li><a href="#step_8_coord" onclick="">启动协调节点</a></li>
                      <li><a href="#step_8_cata" onclick="">启动编目节点</a></li>
                      <li><a href="#step_8_data" onclick="">创建数据节点</a></li>
@@ -673,7 +673,7 @@
                         <tr>
                         	<td>安装路径</td>
                            <td>
-                              <input type="text" class="form-control input-sm" value="/opt/sequoiadb">
+                              <input type="text" class="form-control input-sm" value="/opt/sqldb">
                            </td>
                            <td>安装包安装路径</td>
                         </tr>
@@ -694,7 +694,7 @@
                         <tr>
                         	<td>密码</td>
                            <td>
-                              <input type="text" class="form-control input-sm" value="sequoiadb">
+                              <input type="text" class="form-control input-sm" value="sqldb">
                            </td>
                            <td>创建系统用户名的密码</td>
                         </tr>

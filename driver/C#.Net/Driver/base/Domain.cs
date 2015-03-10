@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using SequoiaDB.Bson;
+using SqlDB.Bson;
 
-/** \namespace SequoiaDB
- *  \brief SequoiaDB Driver for C#.Net
+/** \namespace SqlDB
+ *  \brief SqlDB Driver for C#.Net
  *  \author Zhaobo Tan
  */
-namespace SequoiaDB
+namespace SqlDB
 {
     /** \class Domain
      *  \brief Database operation interfaces of domain
@@ -25,11 +25,11 @@ namespace SequoiaDB
             get { return name; }
         }
 
-        /** \property SequoiaDB
+        /** \property SqlDB
          *  \brief Return the Sequoiadb handle of current domain
          *  \return Sequoiadb object
          */
-        public Sequoiadb SequoiaDB
+        public Sequoiadb SqlDB
         {
             get { return sdb; }
         }
@@ -55,7 +55,7 @@ namespace SequoiaDB
          *                 the data of this collection will be split(hash split) into all the groups in this domain automatically.
          *                 However, it won't automatically split data into those groups which were add into this domain later.
          *                 eg: { "Groups": [ "group1", "group2", "group3" ], "AutoSplit: true" }
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public void Alter(BsonDocument options)
@@ -85,7 +85,7 @@ namespace SequoiaDB
         /** \fn DBCursor ListCS()
          *  \brief List all the collection spaces in current domain.
          *  \return The DBCursor of result
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListCS()
@@ -96,7 +96,7 @@ namespace SequoiaDB
         /** \fn DBCursor listCL()
          *  \brief List all the collections in current domain.
          *  \return The DBCursor of result
-         *  \exception SequoiaDB.BaseException
+         *  \exception SqlDB.BaseException
          *  \exception System.Exception
          */
         public DBCursor ListCL()

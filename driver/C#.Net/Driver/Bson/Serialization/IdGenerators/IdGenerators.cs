@@ -21,9 +21,9 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SequoiaDB.Bson.IO;
+using SqlDB.Bson.IO;
 
-namespace SequoiaDB.Bson.Serialization.IdGenerators
+namespace SqlDB.Bson.Serialization.IdGenerators
 {
     /// <summary>
     /// Represents an Id generator for Guids stored in BsonBinaryData values.

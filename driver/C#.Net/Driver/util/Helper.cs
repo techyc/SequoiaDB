@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace SequoiaDB
+namespace SqlDB
 {
     class Helper
     {
